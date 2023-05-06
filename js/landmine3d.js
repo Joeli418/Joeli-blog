@@ -69,6 +69,7 @@ function reset() {
 
     randomize();
     always();
+    flags = 0;
 }
 
 function winningDetect() {
