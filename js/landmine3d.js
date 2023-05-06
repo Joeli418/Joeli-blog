@@ -84,6 +84,9 @@ window.addEventListener('keydown',
         else if (keypressed == 'f') {
             flagToggle();
         }
+        else if (keypressed == 'r') {
+            reset();
+        }
     }
     , false);
 
