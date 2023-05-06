@@ -112,12 +112,23 @@ function clicked(x, y) {
         if (flagMode == 1) {
             if (flag[currentLayer][x][y] == 0) {
                 flag[currentLayer][x][y] = 1;
-                flags++;
             }
             else {
                 flag[currentLayer][x][y] = 0;
-                flags--;
             }
+            flagcounter = 0;
+            for (var i = 0; i < 5; i++) {
+                for (var j = 0; j < 5; j++){
+                    for (var k = 0; k < 5; k++){
+                        //place mine when criterias met
+                        if(flag[i][j][k] == 1) {
+                            flagcounter++;
+                        }
+                    }
+                }
+            }
+            flags = (flagcounter);
+
         }
         else if (flag[currentLayer][x][y] == 1) {
         }
