@@ -1,0 +1,138 @@
+
+.btnl{
+    border-radius: 20px;
+    flex-wrap: wrap;
+    font-size: 1.8vw;
+    border: none;
+    font-size:20px;
+    cursor: pointer;
+    outline: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    
+    color: rgba(255, 255, 255, 0);
+    text-align: center;
+    width:10vw;
+    height: 5vw;
+    font-family: 'Audiowide';
+    border-radius: 10px;
+    transition: ease-out 0.3s;
+    margin-bottom: 2vw;
+
+    background: rgb(0, 174, 232)
+}
+.btnl:hover{
+    font-size: 25px;
+    background-color: rgb(0, 229, 255);
+    color: rgba(255, 255, 255, 0);
+}
+.show{
+    color: rgba(255, 255, 255, 1);
+}
+
+.btnc{
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 1px;
+    padding-right: 1px;
+    margin: 2px;
+    border-radius: 20px;
+    flex-wrap: wrap;
+    font-size: 1.8vw;
+    border: none;
+    font-size:20px;
+    cursor: pointer;
+    outline: none;
+    
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    width: 10vw;
+    height: 5vw;
+    font-family: 'Audiowide';
+    border-radius: 10px;
+    transition: ease-out 0.3s;
+    margin-bottom: 2vw;
+
+    background: rgb(170, 0, 255)
+}
+.btnc:hover{
+    font-size: 25px;
+    background-color: rgb(0, 229, 255);
+    color: rgba(255, 255, 255, 1);
+}
+.info{
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 1px;
+    padding-right: 1px;
+    margin: 2px;
+    border-radius: 20px;
+    flex-wrap: wrap;
+    font-size: 1.8vw;
+    border: none;
+    font-size:20px;
+    cursor: pointer;
+    outline: none;
+    
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    width: 10vw;
+    height: 5vw;
+    font-family: 'Audiowide';
+    border-radius: 10px;
+    transition: ease-out 0.3s;
+    margin-bottom: 2vw;
+
+    background: rgba(0, 0, 0, 0)
+}
+
+.yellowFlag{
+    background-color: rgb(255, 174, 0);
+}
+.yellowFlag:hover{
+    background-color: yellow;
+}
+.blueReveal{
+    background-color: rgb(0, 77, 244);
+    color: rgba(255, 255, 255, 1);
+}
+.blueReveal:hover{
+    background-color: rgb(0, 77, 244);
+    color: rgba(255, 255, 255, 1);
+}
+.redMine{
+    background-color: red;
+    color: rgba(0, 0, 0, 0);
+}
+.redMine:hover{
+    background-color: red;
+    color: rgba(0, 0, 0, 0);
+}
+.titlefont{
+    font-size: 3vw;
+    font-family: 'Audiowide';
+}
+
+
+@media all and (max-width: 1000px) {
+    .titlefont{
+        font-size: 5vw;
+        font-family: 'Audiowide';
+    }
+    .btnl{
+        margin: 1vw;
+        width:15vw;
+        height: 7vw;
+    }
+    .btnc{
+        margin: 1vw;
+        width:15vw;
+        height: 7vw; 
+    }
+    .info{
+        margin: 1vw;
+        width:15vw;
+        height: 7vw;
+    }
+}
