@@ -66,10 +66,10 @@ function reset() {
             }
         }
     }
-
+    flags = 0;
     randomize();
     always();
-    flags = 0;
+    
 }
 
 function winningDetect() {
