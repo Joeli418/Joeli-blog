@@ -72,6 +72,21 @@ function reset() {
     
 }
 
+window.addEventListener('keydown', 
+    function (e) {
+        keypressed = `${e.key}`;
+        if (keypressed == 'q') {
+            layerFoward();
+        }
+        else if (keypressed == 'w') {
+            layerBackward();
+        }
+        else if (keypressed == 'f') {
+            flagToggle();
+        }
+    }
+    , false);
+
 function winningDetect() {
     win = 1;
     for (var i = 0; i < 5; i++) {
