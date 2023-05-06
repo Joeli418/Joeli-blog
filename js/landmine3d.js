@@ -186,16 +186,23 @@ function randomize() {
         let location = Math.floor(Math.random() * (125 - n))
         //checking through each cell in array
         for (var i = 0; i < 5; i++) {
+            
             for (var j = 0; j < 5; j++){
                 for (var k = 0; k < 5; k++){
                     //place mine when criterias met
-                    if (mine[i][j][k] == 0 && location == 0) {
+                    if (mine[i][j][k] == land.nothing && location == 0) {
                         mine[i][j][k] = land.mine;
+                        location--;
                     }
-                    location--;
+                    else if (mine[i][j][k] == land.mine) {
+                    }
+                    else {
+                        location--;
+                    }                    
                 }
             }
-        } 
+            
+        }
     } 
     fieldInfo(); 
 }
