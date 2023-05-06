@@ -19,7 +19,7 @@
     border-radius: 10px;
     transition: ease-out 0.3s;
     margin-bottom: 2vw;
-
+    transition: 0s;
     background: rgb(0, 174, 232)
 }
 .btnl:hover{
