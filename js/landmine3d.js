@@ -199,10 +199,13 @@ function clicked(x, y) {
     always();
 }
 
+
+//I hard coded my edge cases because im lazy
 function splash(x, y, z) {
     mine[x][y][z] = land.cleared;
     
     if (field[x][y][z] == 0) {
+        //center piecees 6
         if (x > 0) {
             mine[x - 1][y][z] = land.cleared;
         }
@@ -220,6 +223,68 @@ function splash(x, y, z) {
         }
         if (z < 4) {
             mine[x][y][z + 1] = land.cleared;
+        }
+        //edge pieces 12
+        if (x > 0 && y > 0) {
+            mine[x - 1][y - 1][z] = land.cleared;
+        }
+        if (x > 0 && y < 4) {
+            mine[x - 1][y + 1][z] = land.cleared;
+        }
+        if (x > 0 && z > 0) {
+            mine[x - 1][y][z - 1] = land.cleared;
+        }
+        if (x > 0 && z < 4) {
+            mine[x - 1][y][z + 1] = land.cleared;
+        }
+        if (x < 4 && y > 0) {
+            mine[x + 1][y - 1][z] = land.cleared;
+        }
+        if (x < 4 && y < 4) {
+            mine[x + 1][y + 1][z] = land.cleared;
+        }
+        if (x < 4 && z > 0) {
+            mine[x + 1][y][z - 1] = land.cleared;
+        }
+        if (x < 4 && z < 4) {
+            mine[x + 1][y][z + 1] = land.cleared;
+        }
+        if (y > 0 && z > 0) {
+            mine[x][y - 1][z - 1] = land.cleared;
+        }
+        if (y > 0 && z < 4) {
+            mine[x][y - 1][z + 1] = land.cleared;
+        }
+        if (y < 4 && z > 0) {
+            mine[x][y + 1][z - 1] = land.cleared;
+        }
+        if (y < 4 && z < 4) {
+            mine[x][y + 1][z + 1] = land.cleared;
+        }
+        //corner pieces 8
+        if (x > 0 && y > 0 && z > 0) {
+            mine[x - 1][y - 1][z - 1] = land.cleared;
+        }
+        if (x > 0 && y > 0 && z < 4) {
+            mine[x - 1][y - 1][z + 1] = land.cleared;
+        }
+        if (x > 0 && y < 4 && z > 0) {
+            mine[x - 1][y + 1][z - 1] = land.cleared;
+        }
+        if (x > 0 && y < 4 && z < 4) {
+            mine[x - 1][y + 1][z + 1] = land.cleared;
+        }
+        if (x < 4 && y > 0 && z > 0) {
+            mine[x + 1][y - 1][z - 1] = land.cleared;
+        }
+        if (x < 4 && y > 0 && z < 4) {
+            mine[x + 1][y - 1][z + 1] = land.cleared;
+        }
+        if (x < 4 && y < 4 && z > 0) {
+            mine[x + 1][y + 1][z - 1] = land.cleared;
+        }
+        if (x < 4 && y < 4 && z < 4) {
+            mine[x + 1][y + 1][z + 1] = land.cleared;
         }
     }
 }
