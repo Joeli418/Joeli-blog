@@ -20,11 +20,20 @@ flag = [
 [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],
 [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]]
 ];
+Colorgrid = [
+    [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],
+    [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],
+    [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],
+    [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],
+    [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]]
+    ];
 currentLayer = 2;
 bombdetector = 0;
 flagMode = 0; //flag mode
+colorMode = 0;
 flags = 0;
 gameover = 0;
+currentColor = 0;
 
 const land = {
     nothing: 0,
@@ -32,13 +41,24 @@ const land = {
     cleared: 2
 }
 
+const color = {
+    none: 0,
+    red: 1,
+    yellow: 2,
+    green: 3,
+    blue: 4,
+    purple: 5
+}
+
 function always() {
     winningDetect();
     display();
     showLayer();
     showFlags();
+    colorOverlap();
     displayFlag();
     displayClear();
+    displayColor();
     if (bombdetector == 1) {
         displayBomb();
     }
@@ -48,7 +68,7 @@ window.onload = function() {
     randomize();
     fieldInfo();
     always();
-};
+}
 
 function reset() {
     //remove any displayed red
@@ -78,15 +98,22 @@ window.addEventListener('keydown',
         if (keypressed == 'q') {
             layerFoward();
         }
-        else if (keypressed == 'w') {
+        if (keypressed == 'w') {
             layerBackward();
         }
-        else if (keypressed == 'f') {
+        if (keypressed == 'f') {
             flagToggle();
         }
-        else if (keypressed == 'r') {
+        if (keypressed == 'r') {
             reset();
         }
+        if (keypressed == 's') {
+            colorToggle();
+        }
+        if (keypressed == 'a') {
+            paint();
+        }
+
     }
     , false);
 
@@ -104,6 +131,21 @@ function winningDetect() {
     if (win == 1 && gameover == 0) {
         alert("Congratulations! You have successfully Dissected Joe's landmine! You win!");
         gameover = 1;
+    }
+}
+
+function colorOverlap() {
+    for (var i = 0; i < 5; i++) {
+        for (var j = 0; j < 5; j++){
+            for (var k = 0; k < 5; k++){
+                if((mine[i][j][k] == 2 || flag[i][j][k] == 1 ) && gameover == 0)  {
+                    Colorgrid[i][j][k] = 0;
+                }
+                else if (gameover == 1 && (mine[i][j][k] != 0 || flag[i][j][k] == 1)) {
+                    Colorgrid[i][j][k] = 0;
+                }
+            }
+        }
     }
 }
 
@@ -129,6 +171,9 @@ function clicked(x, y) {
             }
             flags = (flagcounter);
 
+        }
+        else if (colorMode == 1) {
+            Colorgrid[currentLayer][x][y] = currentColor;
         }
         else if (flag[currentLayer][x][y] == 1) {
         }
@@ -184,8 +229,12 @@ function spread() {
     }
 }
 
+
 function flagToggle() {
     if (flagMode == 0) {
+        if (colorMode == 1) {
+            paint();
+        }
         flagMode = 1;
         flagbtn.classList.add("yellowFlag");
 
@@ -196,9 +245,74 @@ function flagToggle() {
     }
     always();
 }
+//colormode, but out of names
+function paint() {
+    if (colorMode == 0) {
+        if (flagMode == 1) {
+            flagToggle();
+        }
+        colorMode = 1;
+        colorTog.classList.add("magenta");
 
-function show() {
-    b11.classList.add("show");
+    } 
+    else {
+        colorMode = 0;
+        colorTog.classList.remove("magenta");
+    }
+    
+    always();
+}
+
+function colorToggle() {
+    colorbtn.classList.remove("btlred");
+    colorbtn.classList.remove("btlyellow");
+    colorbtn.classList.remove("btlgreen");
+    colorbtn.classList.remove("btlblue");
+    colorbtn.classList.remove("btlpurple");
+    colorSwitch();
+    colorbtn.classList.add(colorString(currentColor));
+    always();
+}
+
+function colorSwitch() {
+    if (currentColor == color.purple) {
+        currentColor = color.none;
+    }
+    else {
+        currentColor++;
+    }
+    always();
+}
+function deleteColor(i, j) {
+    buttonID(i, j).classList.remove("btlred");
+    buttonID(i, j).classList.remove("btlyellow");
+    buttonID(i, j).classList.remove("btlgreen");
+    buttonID(i, j).classList.remove("btlblue");
+    buttonID(i, j).classList.remove("btlpurple");
+}
+function colorString(input_color) {
+    switch (input_color) {
+        case color.none:
+            return "btl";
+        break;
+        case color.red:
+            return "btlred";
+        break;
+        case color.yellow:
+            return "btlyellow";
+        break;
+        case color.green:
+            return "btlgreen";
+        break;
+        case color.blue:
+            return "btlblue";
+        break;
+        case color.purple:
+            return "btlpurple";
+        break;
+        default:
+            return "btl";
+    }
 }
 
 function randomize() {
@@ -236,7 +350,6 @@ function randomize() {
     } 
     fieldInfo(); 
 }
-
 function fieldInfo() {
     for (var i = 0; i < 5; i++) {
         for (var j = 0; j < 5; j++){
@@ -246,7 +359,6 @@ function fieldInfo() {
         }
     }
 }
-
 function cellInfo(x, y, z) {
     bombs = 0;
     for (var i = x - 1; i <= x + 1; i++) {
@@ -260,7 +372,6 @@ function cellInfo(x, y, z) {
     }
     return bombs;
 }
-
 function layerFoward() {
     if(currentLayer == 0) {
     }
@@ -269,7 +380,6 @@ function layerFoward() {
     }
     always();
 }
-
 function layerBackward() {
     if(currentLayer == 4) {
     }
@@ -318,6 +428,14 @@ function displayBomb() {
             else {buttonID(i, j).classList.remove("redMine");}
         }
     }    
+}
+function displayColor() {
+    for (var i = 0; i < 5; i++) {
+        for (var j = 0; j < 5; j++){
+            deleteColor(i, j);
+            buttonID(i, j).classList.add(colorString(Colorgrid[currentLayer][i][j]));
+        }
+    }  
 }
 function buttonID(x, y) {
     if (x == 0) {
@@ -427,7 +545,6 @@ function showLayer() {
     document.getElementById("layer").innerHTML = "layer: " + (currentLayer + 1).toString(10)
 }
 
-//trust me, do not open this
 function display() {
     for (var i = 0; i < 5; i++) {
         for (var j = 0; j < 5; j++){
