@@ -276,89 +276,93 @@ window.onload = function() {
     frame();
 };
 window.addEventListener('keydown', function (e) {
-    if (e.code == 'KeyW') {
-        jump1 = 1;  
-    }
-    if (e.code == 'KeyA') {
-        vx1a = playerspeed;
-    }
-    if (e.code == 'KeyD') {
-        vx1d = playerspeed;
-    }
-    if ((e.code == 'KeyE' || e.code == 'KeyQ') && fireball1Exist == 0) {
-        fireball1 = this.document.createElement("div");
-        this.document.getElementById("canvas").appendChild(fireball1);
-        fireball1.classList.add("magic");
-        fireball1.classList.add("bluefire");
-        fireball1Exist = 1;
-        firex1 = x1;
-        firey1 = y1;
-        fireball1.style.left = (firex1 + 1).toString(10) + "%";
-        fireball1.style.bottom = (firey1 + 1.5).toString(10) + "%";
-        if (e.code == 'KeyE') {
-            direction1 = 1;
-        } else if (e.code == 'KeyQ') {
-            direction1 = -1;
+        if (gameover == 0) {
+        if (e.code == 'KeyW') {
+            jump1 = 1;  
         }
-    }
+        if (e.code == 'KeyA') {
+            vx1a = playerspeed;
+        }
+        if (e.code == 'KeyD') {
+            vx1d = playerspeed;
+        }
+        if ((e.code == 'KeyE' || e.code == 'KeyQ') && fireball1Exist == 0) {
+            fireball1 = this.document.createElement("div");
+            this.document.getElementById("canvas").appendChild(fireball1);
+            fireball1.classList.add("magic");
+            fireball1.classList.add("bluefire");
+            fireball1Exist = 1;
+            firex1 = x1;
+            firey1 = y1;
+            fireball1.style.left = (firex1 + 1).toString(10) + "%";
+            fireball1.style.bottom = (firey1 + 1.5).toString(10) + "%";
+            if (e.code == 'KeyE') {
+                direction1 = 1;
+            } else if (e.code == 'KeyQ') {
+                direction1 = -1;
+            }
+        }
 
-    if (e.code == 'KeyI') {
-        jump2 = 1;  
-    }
-    if (e.code == 'KeyJ') {
-        vx2a = playerspeed;
-    }
-    if (e.code == 'KeyL') {
-        vx2d = playerspeed;
-    }
-    if ((e.code == 'KeyO' || e.code == 'KeyU') && fireball2Exist == 0) {
-        fireball2 = this.document.createElement("div");
-        this.document.getElementById("canvas").appendChild(fireball2);
-        fireball2.classList.add("magic");
-        fireball2Exist = 1;
-        firex2 = x2;
-        firey2 = y2;
-        fireball2.style.left = (firex2 + 1).toString(10) + "%";
-        fireball2.style.bottom = (firey2 + 1.5).toString(10) + "%";
-        if (e.code == 'KeyO') {
-            direction2 = 1;
-        } else if (e.code == 'KeyU') {
-            direction2 = -1;
+        if (e.code == 'KeyI') {
+            jump2 = 1;  
+        }
+        if (e.code == 'KeyJ') {
+            vx2a = playerspeed;
+        }
+        if (e.code == 'KeyL') {
+            vx2d = playerspeed;
+        }
+        if ((e.code == 'KeyO' || e.code == 'KeyU') && fireball2Exist == 0) {
+            fireball2 = this.document.createElement("div");
+            this.document.getElementById("canvas").appendChild(fireball2);
+            fireball2.classList.add("magic");
+            fireball2Exist = 1;
+            firex2 = x2;
+            firey2 = y2;
+            fireball2.style.left = (firex2 + 1).toString(10) + "%";
+            fireball2.style.bottom = (firey2 + 1.5).toString(10) + "%";
+            if (e.code == 'KeyO') {
+                direction2 = 1;
+            } else if (e.code == 'KeyU') {
+                direction2 = -1;
+            }
         }
     }
 });
 
 window.addEventListener('keyup', function (e) {
-    if (e.code == 'KeyW' && onGround1 == 1) {
-        jump1 = 0;
-        vy1 = jumpPower1; 
-        jumpPower1 = 0;       
-    }
-    else if (e.code == 'KeyW') {
-        jump1 = 0;
-        jumpPower1 = 0;         
-    }
-    if (e.code == 'KeyA') {
-        vx1a = 0;
-    }
-    if (e.code == 'KeyD') {
-        vx1d = 0;
-    }
+    if (gameover == 0) {
+        if (e.code == 'KeyW' && onGround1 == 1) {
+            jump1 = 0;
+            vy1 = jumpPower1; 
+            jumpPower1 = 0;       
+        }
+        else if (e.code == 'KeyW') {
+            jump1 = 0;
+            jumpPower1 = 0;         
+        }
+        if (e.code == 'KeyA') {
+            vx1a = 0;
+        }
+        if (e.code == 'KeyD') {
+            vx1d = 0;
+        }
 
-    if (e.code == 'KeyI' && onGround2 == 1) {
-        jump2 = 0;
-        vy2 = jumpPower2; 
-        jumpPower2 = 0;       
-    }
-    else if (e.code == 'KeyI') {
-        jump2 = 0;
-        jumpPower2 = 0;         
-    }
-    if (e.code == 'KeyJ') {
-        vx2a = 0;
-    }
-    if (e.code == 'KeyL') {
-        vx2d = 0;
+        if (e.code == 'KeyI' && onGround2 == 1) {
+            jump2 = 0;
+            vy2 = jumpPower2; 
+            jumpPower2 = 0;       
+        }
+        else if (e.code == 'KeyI') {
+            jump2 = 0;
+            jumpPower2 = 0;         
+        }
+        if (e.code == 'KeyJ') {
+            vx2a = 0;
+        }
+        if (e.code == 'KeyL') {
+            vx2d = 0;
+        }
     }
 });
 
