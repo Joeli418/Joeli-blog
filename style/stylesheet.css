@@ -150,6 +150,17 @@ p{
     width: 80%;
     margin: 0 auto;
 }
+
+xheader{
+    background-color:rgba(240, 248, 255, 0);
+    display: none;
+    top: 80px;
+    right: 0vw;
+    position: absolute;
+    border-radius: 20px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
 header{
     background-color: #0466c8;
     border-radius: 20px;
@@ -331,6 +342,97 @@ color: rgb(165, 165, 165);
     --bgcol:#757575;
     transition: ease-out 0.3s;
 }
+
+.btn6{
+    border: none;
+    cursor: pointer;
+    outline: none;
+    
+    text-align: center;
+    padding: 5px 10px;
+    width: 90px;
+    height: 50px;
+    font-size: 15px;
+    background-color: var(--bgcol);
+    font-family: 'Audiowide';
+    border-radius: 10px;
+    transition: ease-out 0.3s;
+}
+.btn6:hover{
+    font-size: 15px;
+    background-color: magenta;
+}
+
+.magentabtn{
+    background-color: magenta;
+}
+.abtn {
+    border: none;
+    cursor: pointer;
+    outline: none;
+    
+    text-align: center;
+    padding: 5px 10px;
+    width: 90px;
+    height: 50px;
+    font-size: 15px;
+    background-color: var(--bgcol);
+    font-family: 'Audiowide';
+    border-radius: 10px;
+    transition: ease-out 0.3s;
+}
+.abtn:hover{
+    font-size: 15px;
+    background-color: rgb(255, 0, 115);
+}
+
+.slidebtn {
+    animation-name: slidein;
+    background-color: magenta;
+    color: white;
+    animation-duration: 0.5s;
+    margin: 4px 2px;
+}
+@keyframes slidein {
+    0% {background-color: rgba(198, 0, 198, 0);
+        width: 90px;
+        margin: 4px 100px;
+    }
+    50% {background-color: rgba(198, 0, 198, 1);
+        color: rgba(255, 255, 255, 0.6);
+        margin: 4px 0px;
+        
+        
+    }
+    100% {background-color: magenta;
+        margin: 4px 0px;
+        width: 90px;
+        color: white;
+        
+    }
+  }
+
+.fadebtn {
+    animation-name: fadein;
+    background-color: rgb(198, 0, 198);
+    color: white;
+    animation-duration: 0.5s;
+    margin: 4px 2px;
+}
+@keyframes fadein {
+    0% {background-color: rgba(198, 0, 198, 0);
+        color: rgba(255, 255, 255, 0);
+        margin: 0px 2px;
+    }
+    50% {background-color: rgba(198, 0, 198, 0.4);
+        color: rgba(255, 255, 255, 0.4);
+        margin: 10px 2px;
+    }
+    100% {background-color: rgb(198, 0, 198);
+        margin: 4px 2px;
+        color: white;
+    }
+  }
 
 contact ul{
     list-style: none;
