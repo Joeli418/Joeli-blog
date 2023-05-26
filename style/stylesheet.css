@@ -499,6 +499,7 @@ footer{
     padding-bottom: 3vw ;
 }
 
+
 @media all and (min-width: 1000px){
     .mobile_view{
         display: none;
@@ -515,6 +516,12 @@ footer{
 }
 @media all and (max-width: 1250px) {
     @media all and (max-width: 1000px) {
+
+        .audiobox{
+            width: 80%;
+            zoom :200%;
+            
+        }
         .laptop_view{
             display: none;
         }
