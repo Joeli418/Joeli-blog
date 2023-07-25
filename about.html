@@ -5,6 +5,27 @@
 		<link rel="shortcut icon" type="image/jpeg" href="images/sig_tab_logo.png">
 		<link href="style/stylesheet.css" rel="stylesheet"/> 
 		<script src="js/script.js"></script>
+		<script>
+			randv = 2;
+			window.onload = function() {
+				console.log("hello world");
+				randv = Math.random();
+				console.log(randv);
+				if(randv < 0.2) {
+					document.getElementById("aboutbtn2").innerHTML = "???"
+					document.getElementById("aboutbtn2").classList.remove("slidebtn");
+					document.getElementById("aboutbtn2").classList.add("slidebtn2");
+				}
+			}
+			function domain_chance() {
+				if(randv < 0.2) {
+					location.replace("secret_portal.html")
+				}
+				else {
+					location.replace("about.html")
+				}
+			}
+		</script>
 	</head>
 	<body>
 <!------------------------------------------------navigation below------------------------------------------------>
@@ -21,7 +42,7 @@
 	<xheader id="ext1">
 		<nav>
 			<ul>
-				<li><a href="about.html"><button class="abtn" id="aboutbtn2" >About</button></a></li>
+				<li><a onclick="domain_chance()"><button class="btn6" id="aboutbtn2">About</button></a></li>
 				<li><a href="magicCraft.html"><button class="btn6" id="craftbtn">Crafts</button></a></li>
 				<li><a href="musicMagic.html"><button class="btn6" id="musicbtn">Music</button></a></li>
 				<li><a href="friendshipMagic.html"><button class="btn6" id="friendsbtn">Friends</button></a></li>
@@ -37,7 +58,7 @@
 <div class="sidenav"  id="sidenav">
 	<a class="closebtn" onclick="closesidenav()">&times;</a>
 	<a href="index.html">Home</a>
-	<a href="about.html">About</a>
+	<a href="secret_portal.html">???</a>
 
 	<a href="magicCraft.html">Crafts</a>
 	<a href="musicMagic.html">Music</a>

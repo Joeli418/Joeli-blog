@@ -24,7 +24,7 @@ function toggle_extension1() {
         document.getElementById("foodbtn").classList.add("fadebtn");
         document.getElementById("friendsbtn").classList.add("fadebtn");
         document.getElementById("tradebtn").classList.add("fadebtn");
-        document.getElementById("aboutbtn2").classList.add("slidebtn")
+        document.getElementById("aboutbtn2").classList.add("slidebtn");
     }
 }
 
