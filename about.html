@@ -12,17 +12,18 @@
 				randv = Math.random();
 				console.log(randv);
 				if(randv < 0.2) {
-					document.getElementById("aboutbtn2").innerHTML = "???"
+					document.getElementById("aboutbtn2").innerHTML = "???";
 					document.getElementById("aboutbtn2").classList.remove("slidebtn");
 					document.getElementById("aboutbtn2").classList.add("slidebtn2");
+					document.getElementById("sabout2").innerHTML = "???";
 				}
 			}
 			function domain_chance() {
 				if(randv < 0.2) {
-					location.replace("secret_portal.html")
+					location.replace("secret_portal.html");
 				}
 				else {
-					location.replace("about.html")
+					location.replace("about.html");
 				}
 			}
 		</script>
@@ -58,7 +59,7 @@
 <div class="sidenav"  id="sidenav">
 	<a class="closebtn" onclick="closesidenav()">&times;</a>
 	<a href="index.html">Home</a>
-	<a href="secret_portal.html">???</a>
+	<a onclick="domain_chance()"><div id = "sabout2">About</div></a>
 
 	<a href="magicCraft.html">Crafts</a>
 	<a href="musicMagic.html">Music</a>
