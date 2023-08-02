@@ -1,287 +1,351 @@
-var C3 = document.getElementById("piano_C3");
-var Cs3 = document.getElementById("piano_Cs3");
-var D3 = document.getElementById("piano_D3");
-var Ds3 = document.getElementById("piano_Ds3");
-var E3 = document.getElementById("piano_E3");
-var F3 = document.getElementById("piano_F3");
-var Fs3 = document.getElementById("piano_Fs3");
-var G3 = document.getElementById("piano_G3");
-var Gs3 = document.getElementById("piano_Gs3");
-var A3 = document.getElementById("piano_A3");
-var As3 = document.getElementById("piano_As3");
-var B3 = document.getElementById("piano_B3");
-var C4 = document.getElementById("piano_C4");
+n = [
+    document.getElementById("piano_C3"),
+    document.getElementById("piano_Cs3"),
+    document.getElementById("piano_D3"),
+    document.getElementById("piano_Ds3"),
+    document.getElementById("piano_E3"),
+    document.getElementById("piano_F3"),
+    document.getElementById("piano_Fs3"),
+    document.getElementById("piano_G3"),
+    document.getElementById("piano_Gs3"),
+    document.getElementById("piano_A3"),
+    document.getElementById("piano_As3"),
+    document.getElementById("piano_B3"),
+    document.getElementById("piano_C4"),
+    document.getElementById("piano_Cs4"),
+    document.getElementById("piano_D4"),
+    document.getElementById("piano_Ds4"),
+    document.getElementById("piano_E4"),
+    document.getElementById("piano_F4"),
+    document.getElementById("piano_Fs4"),
+    document.getElementById("piano_G4"),
+    document.getElementById("piano_Gs4"),
+    document.getElementById("piano_A4"),
+    document.getElementById("piano_As4"),
+    document.getElementById("piano_B4"),
+    document.getElementById("piano_C5"),
+    document.getElementById("piano_Cs5"),
+    document.getElementById("piano_D5"),
+    document.getElementById("piano_Ds5"),
+    document.getElementById("piano_E5"),
+    document.getElementById("piano_F5"),
+    document.getElementById("piano_Fs5"),
+    document.getElementById("piano_G5"),
+    document.getElementById("piano_Gs5"),
+    document.getElementById("piano_A5"),
+    document.getElementById("piano_As5"),
+    document.getElementById("piano_B5"),
+    document.getElementById("piano_C6"),
+    document.getElementById("piano_Cs6"),
+    document.getElementById("piano_D6"),
+    document.getElementById("piano_Ds6"),
+    document.getElementById("piano_E6")]
 
-var C4 = document.getElementById("piano_C4");
-var Cs4 = document.getElementById("piano_Cs4");
-var D4 = document.getElementById("piano_D4");
-var Ds4 = document.getElementById("piano_Ds4");
-var E4 = document.getElementById("piano_E4");
-var F4 = document.getElementById("piano_F4");
-var Fs4 = document.getElementById("piano_Fs4");
-var G4 = document.getElementById("piano_G4");
-var Gs4 = document.getElementById("piano_Gs4");
-var A4 = document.getElementById("piano_A4");
-var As4 = document.getElementById("piano_As4");
-var B4 = document.getElementById("piano_B4");
-var C5 = document.getElementById("piano_C5");
+var rt = 0;
+var lt = 0;
 
 window.addEventListener('keyup', function (e) {
     if (e.code == 'KeyZ') {
-        C3.pause(); 
-        C3.currentTime = 0;
+        n[0 + lt * 12].pause(); 
+        n[0 + lt * 12].currentTime = 0;
     }
     if (e.code == 'KeyX') {
-        Cs3.pause(); 
-        Cs3.currentTime = 0;
+        n[1 + lt * 12].pause(); 
+        n[1 + lt * 12].currentTime = 0;
     }
     if (e.code == 'KeyC') {
-        D3.pause(); 
-        D3.currentTime = 0;
+        n[2 + lt * 12].pause(); 
+        n[2 + lt * 12].currentTime = 0;
     }
     if (e.code == 'KeyV') {
-        Ds3.pause(); 
-        Ds3.currentTime = 0;
+        n[3 + lt * 12].pause(); 
+        n[3 + lt * 12].currentTime = 0;
     }
     if (e.code == 'KeyB') {
-        E3.pause(); 
-        E3.currentTime = 0;
+        n[4 + lt * 12].pause(); 
+        n[4 + lt * 12].currentTime = 0;
     }
     if (e.code == 'KeyA') {
-        E3.pause(); 
-        E3.currentTime = 0;
+        n[4 + lt * 12].pause(); 
+        n[4 + lt * 12].currentTime = 0;
     }
     if (e.code == 'KeyS') {
-        F3.pause(); 
-        F3.currentTime = 0;
+        n[5 + lt * 12].pause(); 
+        n[5 + lt * 12].currentTime = 0;
     }
     if (e.code == 'KeyD') {
-        Fs3.pause(); 
-        Fs3.currentTime = 0;
+        n[6 + lt * 12].pause(); 
+        n[6 + lt * 12].currentTime = 0;
     }
     if (e.code == 'KeyF') {
-        G3.pause(); 
-        G3.currentTime = 0;
+        n[7 + lt * 12].pause(); 
+        n[7 + lt * 12].currentTime = 0;
     }
     if (e.code == 'KeyG') {
-        Gs3.pause(); 
-        Gs3.currentTime = 0;
+        n[8 + lt * 12].pause(); 
+        n[8 + lt * 12].currentTime = 0;
     }
     if (e.code == 'KeyQ') {
-        Gs3.pause(); 
-        Gs3.currentTime = 0;
+        n[8 + lt * 12].pause(); 
+        n[8 + lt * 12].currentTime = 0;
     }
     if (e.code == 'KeyW') {
-        A3.pause(); 
-        A3.currentTime = 0;
+        n[9 + lt * 12].pause(); 
+        n[9 + lt * 12].currentTime = 0;
     }
     if (e.code == 'KeyE') {
-        As3.pause(); 
-        As3.currentTime = 0;
+        n[10 + lt * 12].pause(); 
+        n[10 + lt * 12].currentTime = 0;
     }
     if (e.code == 'KeyR') {
-        B3.pause(); 
-        B3.currentTime = 0;
+        n[11 + lt * 12].pause(); 
+        n[11 + lt * 12].currentTime = 0;
     }
     if (e.code == 'KeyT') {
-        C4.pause(); 
-        C4.currentTime = 0;
+        n[12 + lt * 12].pause(); 
+        n[12 + lt * 12].currentTime = 0;
     }
     if (e.code == 'Digit1') {
-        C4.pause(); 
-        C4.currentTime = 0;
+        n[12 + lt * 12].pause(); 
+        n[12 + lt * 12].currentTime = 0;
     }
     if (e.code == 'Digit2') {
-        Cs4.pause(); 
-        Cs4.currentTime = 0;
+        n[13 + lt * 12].pause(); 
+        n[13 + lt * 12].currentTime = 0;
     }
     if (e.code == 'Digit3') {
-        D4.pause(); 
-        D4.currentTime = 0;
+        n[14 + lt * 12].pause(); 
+        n[14 + lt * 12].currentTime = 0;
     }
     if (e.code == 'Digit4') {
-        Ds4.pause(); 
-        Ds4.currentTime = 0;
+        n[15 + lt * 12].pause(); 
+        n[15 + lt * 12].currentTime = 0;
     }
     if (e.code == 'Digit5') {
-        E4.pause(); 
-        E4.currentTime = 0;
+        n[16 + lt * 12].pause(); 
+        n[16 + lt * 12].currentTime = 0;
     }
-    //---------------------------------------
+    //---------------------------------------right side
     if (e.code == 'KeyN') {
-        C4.pause(); 
-        C4.currentTime = 0;
+        n[12 + rt * 12].pause(); 
+        n[12 + rt * 12].currentTime = 0;
     }
     if (e.code == 'KeyM') {
-        Cs4.pause(); 
-        Cs4.currentTime = 0;
+        n[13 + rt * 12].pause(); 
+        n[13 + rt * 12].currentTime = 0;
     }
     if (e.code == 'Comma') {
-        D4.pause(); 
-        D4.currentTime = 0;
+        n[14 + rt * 12].pause(); 
+        n[14 + rt * 12].currentTime = 0;
     }
     if (e.code == 'Period') {
-        Ds4.pause(); 
-        Ds4.currentTime = 0;
+        n[15 + rt * 12].pause(); 
+        n[15 + rt * 12].currentTime = 0;
     }
     if (e.code == 'Slash') {
-        E4.pause(); 
-        E4.currentTime = 0;
+        n[16 + rt * 12].pause(); 
+        n[16 + rt * 12].currentTime = 0;
     }
     if (e.code == 'KeyH') {
-        E4.pause(); 
-        E4.currentTime = 0;
+        n[16 + rt * 12].pause(); 
+        n[16 + rt * 12].currentTime = 0;
     }
     if (e.code == 'KeyJ') {
-        F4.pause(); 
-        F4.currentTime = 0;
+        n[17 + rt * 12].pause(); 
+        n[17 + rt * 12].currentTime = 0;
     }
     if (e.code == 'KeyK') {
-        Fs4.pause(); 
-        Fs4.currentTime = 0;
+        n[18 + rt * 12].pause(); 
+        n[18 + rt * 12].currentTime = 0;
     }
     if (e.code == 'KeyL') {
-        G4.pause(); 
-        G4.currentTime = 0;
+        n[19 + rt * 12].pause(); 
+        n[19 + rt * 12].currentTime = 0;
     }
     if (e.code == 'Semicolon') {
-        Gs4.pause(); 
-        Gs4.currentTime = 0;
+        n[20 + rt * 12].pause(); 
+        n[20 + rt * 12].currentTime = 0;
     }
     if (e.code == 'KeyY') {
-        Gs4.pause(); 
-        Gs4.currentTime = 0;
+        n[20 + rt * 12].pause(); 
+        n[20 + rt * 12].currentTime = 0;
     }
     if (e.code == 'KeyU') {
-        A4.pause(); 
-        A4.currentTime = 0;
+        n[21 + rt * 12].pause(); 
+        n[21 + rt * 12].currentTime = 0;
     }
     if (e.code == 'KeyI') {
-        As4.pause(); 
-        As4.currentTime = 0;
+        n[22 + rt * 12].pause(); 
+        n[22 + rt * 12].currentTime = 0;
     }
     if (e.code == 'KeyO') {
-        B4.pause(); 
-        B4.currentTime = 0;
+        n[23 + rt * 12].pause(); 
+        n[23 + rt * 12].currentTime = 0;
     }
     if (e.code == 'KeyP') {
-        C5.pause(); 
-        C5.currentTime = 0;
+        n[24 + rt * 12].pause(); 
+        n[24 + rt * 12].currentTime = 0;
     }
     if (e.code == 'Digit6') {
-        C5.pause(); 
-        C5.currentTime = 0;
+        n[24 + rt * 12].pause(); 
+        n[24 + rt * 12].currentTime = 0;
+    }
+
+    if (e.code == 'Digit7') {
+        n[25 + rt * 12].pause(); 
+        n[25 + rt * 12].currentTime = 0;
+    }
+    if (e.code == 'Digit8') {
+        n[26 + rt * 12].pause(); 
+        n[26 + rt * 12].currentTime = 0;
+    }
+    if (e.code == 'Digit9') {
+        n[27 + rt * 12].pause(); 
+        n[27 + rt * 12].currentTime = 0;
+    }
+    if (e.code == 'Digit0') {
+        n[28 + rt * 12].pause(); 
+        n[28 + rt * 12].currentTime = 0;
+    }
+    //-------------------- mischellanious
+    if (e.code == 'Space') {
+        if (rt == 1) {
+            rt = 0;
+        }
+        else {
+            rt = 1;
+        }
+    }
+    if (e.code == 'Backquote') {
+        if (lt == 1) {
+            lt = 0;
+        }
+        else {
+            lt = 1;
+        }
     }
 });
 
 window.addEventListener('keydown', function (e) {
     if (e.code == 'KeyZ') {
-        C3.play(); 
+        n[0 + lt * 12].play(); 
     }
     if (e.code == 'KeyX') {
-        Cs3.play(); 
+        n[1 + lt * 12].play(); 
     }
     if (e.code == 'KeyC') {
-        D3.play(); 
+        n[2 + lt * 12].play(); 
     }
     if (e.code == 'KeyV') {
-        Ds3.play(); 
+        n[3 + lt * 12].play(); 
     }
     if (e.code == 'KeyB') {
-        E3.play(); 
+        n[4 + lt * 12].play(); 
     }
     if (e.code == 'KeyA') {
-        E3.play(); 
+        n[4 + lt * 12].play(); 
     }
     if (e.code == 'KeyS') {
-        F3.play(); 
+        n[5 + lt * 12].play(); 
     }
     if (e.code == 'KeyD') {
-        Fs3.play(); 
+        n[6 + lt * 12].play(); 
     }
     if (e.code == 'KeyF') {
-        G3.play(); 
+        n[7 + lt * 12].play(); 
     }
     if (e.code == 'KeyG') {
-        Gs3.play(); 
+        n[8 + lt * 12].play(); 
     }
     if (e.code == 'KeyQ') {
-        Gs3.play(); 
+        n[8 + lt * 12].play(); 
     }
     if (e.code == 'KeyW') {
-        A3.play(); 
+        n[9 + lt * 12].play(); 
     }
     if (e.code == 'KeyE') {
-        As3.play(); 
+        n[10 + lt * 12].play(); 
     }
     if (e.code == 'KeyR') {
-        B3.play(); 
+        n[11 + lt * 12].play(); 
     }
     if (e.code == 'KeyT') {
-        C4.play(); 
+        n[12 + lt * 12].play(); 
     }
     if (e.code == 'Digit1') {
-        C4.play(); 
+        n[12 + lt * 12].play(); 
     }
     if (e.code == 'Digit2') {
-        Cs4.play(); 
+        n[13 + lt * 12].play(); 
     }
     if (e.code == 'Digit3') {
-        D4.play(); 
+        n[14 + lt * 12].play(); 
     }
     if (e.code == 'Digit4') {
-        Ds4.play(); 
+        n[15 + lt * 12].play(); 
     }
     if (e.code == 'Digit5') {
-        E4.play(); 
+        n[16 + lt * 12].play(); 
     }
-    //-------------------------------------
+    //-------------------------------------rightside
     if (e.code == 'KeyN') {
-        C4.play(); 
+        n[12 + rt * 12].play(); 
     }
     if (e.code == 'KeyM') {
-        Cs4.play(); 
+        n[13 + rt * 12].play(); 
     }
     if (e.code == 'Comma') {
-        D4.play(); 
+        n[14 + rt * 12].play(); 
     }
     if (e.code == 'Period') {
-        Ds4.play(); 
+        n[15 + rt * 12].play(); 
     }
     if (e.code == 'Slash') {
-        E4.play(); 
+        n[16 + rt * 12].play(); 
     }
     if (e.code == 'KeyH') {
-        E4.play(); 
+        n[16 + rt * 12].play(); 
     }
     if (e.code == 'KeyJ') {
-        F4.play(); 
+        n[17 + rt * 12].play(); 
     }
     if (e.code == 'KeyK') {
-        Fs4.play(); 
+        n[18 + rt * 12].play(); 
     }
     if (e.code == 'KeyL') {
-        G4.play(); 
+        n[19 + rt * 12].play(); 
     }
     if (e.code == 'Semicolon') {
-        Gs4.play(); 
+        n[20 + rt * 12].play(); 
     }
     if (e.code == 'KeyY') {
-        Gs4.play(); 
+        n[20 + rt * 12].play(); 
     }
     if (e.code == 'KeyU') {
-        A4.play(); 
+        n[21 + rt * 12].play(); 
     }
     if (e.code == 'KeyI') {
-        As4.play(); 
+        n[22 + rt * 12].play(); 
     }
     if (e.code == 'KeyO') {
-        B4.play(); 
+        n[23 + rt * 12].play(); 
     }
     if (e.code == 'KeyP') {
-        C5.play(); 
+        n[24 + rt * 12].play(); 
     }
     if (e.code == 'Digit6') {
-        C5.play(); 
+        n[24 + rt * 12].play(); 
+    }
+    if (e.code == 'Digit7') {
+        n[25 + rt * 12].play(); 
+    }
+    if (e.code == 'Digit8') {
+        n[26 + rt * 12].play(); 
+    }
+    if (e.code == 'Digit9') {
+        n[27 + rt * 12].play(); 
+    }
+    if (e.code == 'Digit0') {
+        n[28 + rt * 12].play(); 
     }
 });
