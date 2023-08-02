@@ -57,6 +57,10 @@ var rt = 0;
 var lt = 0;
 var shifter = 0
 
+window.onkeydown = function(e) {
+    return e.keyCode !== 32;
+};
+
 window.addEventListener('keyup', function (e) {
     if (e.code == 'KeyZ') {
         n[0 + lt * 12 + shifter].pause(); 
@@ -228,6 +232,7 @@ window.addEventListener('keyup', function (e) {
         else {
             rt = 1;
         }
+        return false;
     }
     if (e.code == 'Backquote') {
         if (lt == 1) {
