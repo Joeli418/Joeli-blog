@@ -283,7 +283,19 @@
             typing a sequence of letter on something you're familiar with should be
             very intuitive
         </div>
-
+        <center>
+            <h3>paste / make "score" here</h3>
+            <input type="text" id="fname" name="fname" 
+            style="
+            width: 90vw; 
+            height: 10vh; 
+            background-color: rgb(54, 168, 255); 
+            border-radius: 50px; 
+            font-family: sans-serif; 
+            font-size: x-large;
+            text-align: center;
+            padding: 10px;"><br>
+        </center>
         <table  class="center" >
             <tr>
                 <td style="text-align:center;padding: 1vw;" class="tabletd; titlefont">1</td>
@@ -299,16 +311,16 @@
                 
             </tr>
             <tr>
-                <td style="text-align:center" class="tabletd">C4</td>
-                <td style="text-align:center" class="tabletd">C#4</td>
-                <td style="text-align:center" class="tabletd">D</td>
-                <td style="text-align:center" class="tabletd">D#4</td>
-                <td style="text-align:center" class="tabletd">E4</td>
-                <td style="text-align:center" class="tabletd">C5</td>
-                <td style="text-align:center" class="tabletd">C#5</td>
-                <td style="text-align:center" class="tabletd">D</td>
-                <td style="text-align:center" class="tabletd">D#5</td>
-                <td style="text-align:center" class="tabletd">E5</td>
+                <td style="text-align:center" class="tabletd" id = "button1">C4</td>
+                <td style="text-align:center" class="tabletd" id = "button2">C#4</td>
+                <td style="text-align:center" class="tabletd" id = "button3">D4</td>
+                <td style="text-align:center" class="tabletd" id = "button4">D#4</td>
+                <td style="text-align:center" class="tabletd" id = "button5">E4</td>
+                <td style="text-align:center" class="tabletd" id = "button6">C5</td>
+                <td style="text-align:center" class="tabletd" id = "button7">C#5</td>
+                <td style="text-align:center" class="tabletd" id = "button8">D5</td>
+                <td style="text-align:center" class="tabletd" id = "button9">D#5</td>
+                <td style="text-align:center" class="tabletd" id = "button0">E5</td>
             </tr>
             <tr>
                 <td style="text-align:center;padding: 1vw;" class="tabletd; titlefont">Q</td>
@@ -324,33 +336,86 @@
                 
             </tr>
             <tr>
-                <td style="text-align:center" class="tabletd">A</td>
-                <td style="text-align:center" class="tabletd">A3</td>
-                <td style="text-align:center" class="tabletd">A#3</td>
-                <td style="text-align:center" class="tabletd">B3</td>
-                <td style="text-align:center" class="tabletd">C4</td>
-                <td style="text-align:center" class="tabletd">Y</td>
-                <td style="text-align:center" class="tabletd">U</td>
-                <td style="text-align:center" class="tabletd">I</td>
-                <td style="text-align:center" class="tabletd">O</td>
-                <td style="text-align:center" class="tabletd">Q</td>
+                <td style="text-align:center" class="tabletd" id = "buttonQ">G#3</td>
+                <td style="text-align:center" class="tabletd" id = "buttonW">A3</td>
+                <td style="text-align:center" class="tabletd" id = "buttonE">A#3</td>
+                <td style="text-align:center" class="tabletd" id = "buttonR">B3</td>
+                <td style="text-align:center" class="tabletd" id = "buttonT">C4</td>
+                <td style="text-align:center" class="tabletd" id = "buttonY">G#4</td>
+                <td style="text-align:center" class="tabletd" id = "buttonU">A4</td>
+                <td style="text-align:center" class="tabletd" id = "buttonI">A#4</td>
+                <td style="text-align:center" class="tabletd" id = "buttonO">B4</td>
+                <td style="text-align:center" class="tabletd" id = "buttonP">C5</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;padding: 1vw;" class="tabletd; titlefont">A</td>
+                <td style="text-align:center;padding: 1vw;" class="tabletd; titlefont">S</td>
+                <td style="text-align:center;padding: 1vw;" class="tabletd; titlefont">D</td>
+                <td style="text-align:center;padding: 1vw;" class="tabletd; titlefont">F</td>
+                <td style="text-align:center;padding: 1vw;" class="tabletd; titlefont">G</td>
+                <td style="text-align:center;padding: 1vw;" class="tabletd; titlefont">H</td>
+                <td style="text-align:center;padding: 1vw;" class="tabletd; titlefont">J</td>
+                <td style="text-align:center;padding: 1vw;" class="tabletd; titlefont">K</td>
+                <td style="text-align:center;padding: 1vw;" class="tabletd; titlefont">L</td>
+                <td style="text-align:center;padding: 1vw;" class="tabletd; titlefont">;</td>
+                
+            </tr>
+            <tr>
+                <td style="text-align:center" class="tabletd" id = "buttonA">E3</td>
+                <td style="text-align:center" class="tabletd" id = "buttonS">F3</td>
+                <td style="text-align:center" class="tabletd" id = "buttonD">F#3</td>
+                <td style="text-align:center" class="tabletd" id = "buttonF">G3</td>
+                <td style="text-align:center" class="tabletd" id = "buttonG">G#3</td>
+                <td style="text-align:center" class="tabletd" id = "buttonH">E4</td>
+                <td style="text-align:center" class="tabletd" id = "buttonJ">F4</td>
+                <td style="text-align:center" class="tabletd" id = "buttonK">F#4</td>
+                <td style="text-align:center" class="tabletd" id = "buttonL">G4</td>
+                <td style="text-align:center" class="tabletd" id = "buttonSemi">G#4</td>
+            </tr>
+            <tr>
+                <td style="text-align:center;padding: 1vw;" class="tabletd; titlefont">Z</td>
+                <td style="text-align:center;padding: 1vw;" class="tabletd; titlefont">X</td>
+                <td style="text-align:center;padding: 1vw;" class="tabletd; titlefont">C</td>
+                <td style="text-align:center;padding: 1vw;" class="tabletd; titlefont">V</td>
+                <td style="text-align:center;padding: 1vw;" class="tabletd; titlefont">B</td>
+                <td style="text-align:center;padding: 1vw;" class="tabletd; titlefont">N</td>
+                <td style="text-align:center;padding: 1vw;" class="tabletd; titlefont">M</td>
+                <td style="text-align:center;padding: 1vw;" class="tabletd; titlefont">,</td>
+                <td style="text-align:center;padding: 1vw;" class="tabletd; titlefont">.</td>
+                <td style="text-align:center;padding: 1vw;" class="tabletd; titlefont">/</td>
+                
+            </tr>
+            <tr>
+                <td style="text-align:center" class="tabletd" id = "buttonZ">C3</td>
+                <td style="text-align:center" class="tabletd" id = "buttonX">C#3</td>
+                <td style="text-align:center" class="tabletd" id = "buttonC">D3</td>
+                <td style="text-align:center" class="tabletd" id = "buttonV">D#3</td>
+                <td style="text-align:center" class="tabletd" id = "buttonB">E3</td>
+                <td style="text-align:center" class="tabletd" id = "buttonN">C4</td>
+                <td style="text-align:center" class="tabletd" id = "buttonM">C#4</td>
+                <td style="text-align:center" class="tabletd" id = "buttonCom">D4</td>
+                <td style="text-align:center" class="tabletd" id = "buttonPer">D#4</td>
+                <td style="text-align:center" class="tabletd" id = "buttonSlas">E4</td>
             </tr>
         </table>
+        <br><br>
+        <table class="center">
+            <tr>
+                <td style="width: 20vw; text-align: center;"><button class="btn7" id="backslash">'</button></td>
+                <td style="width: 20vw; text-align: center;"><button class="btn7" id="space">Space</button></td>
+            </tr>
+            <tr>
+                <td style="width: 20vw; text-align: center;">toggle left hand by an octave</td>
+                <td style="width: 20vw; text-align: center;">toggle right hand by an octave</td>
+            </tr>
+        </table>
+        <br>
+        <center>press '[' and ']' to shift between semitones or change keys</center>
 
         <center>
-            <h3>paste / make "score" here</h3>
-            <input type="text" id="fname" name="fname" 
-            style="
-            width: 90vw; 
-            height: 10vh; 
-            background-color: rgb(54, 168, 255); 
-            border-radius: 50px; 
-            font-family: sans-serif; 
-            font-size: x-large;
-            text-align: center;
-            padding: 10px;"><br>
+            
 
-            <h2>Examples</h2>
+            <h2 class = "titlefont">Examples</h2>
             <h3>Twinkle Twinkle Little Star (Melody)</h3>
             nnlluul  jjhh,,n  lljjhh,  lljjhjhjh,  nnlluul  jjhh,,n
 

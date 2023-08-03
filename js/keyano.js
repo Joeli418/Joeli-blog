@@ -54,59 +54,59 @@ n = [
     document.getElementById("piano_E7")]
 
 note_name = [
-    'C3',
-    'C#3',
-    'D3',
-    'D#3',
-    'E3',
-    'F3',
-    'F#3',
-    'G3',
-    'G#3',
-    'A3',
-    'A#3',
-    'B3',
-    'C4',
-    'C#4',
-    'D4',
-    'D#4',
-    'E4',
-    'F4',
-    'F#4',
-    'G4',
-    'G#4',
-    'A4',
-    'A#4',
-    'B4',
-    'C5',
-    'C#5',
-    'D5',
-    'D#5',
-    'E5',
-    'F5',
-    'F#5',
-    'G5',
-    'G#5',
-    'A5',
-    'A#5',
-    'B5',
-    'C6',
-    'C#6',
-    'D6',
-    'D#6',
-    'E6',
-    'F6',
-    'F#6',
-    'G6',
-    'G#6',
-    'A6',
-    'A#6',
-    'B6',
-    'C7',
-    'C#7',
-    'D7',
-    'D#7',
-    'E7']
+    "C3",
+    "C#3",
+    "D3",
+    "D#3",
+    "E3",
+    "F3",
+    "F#3",
+    "G3",
+    "G#3",
+    "A3",
+    "A#3",
+    "B3",
+    "C4",
+    "C#4",
+    "D4",
+    "D#4",
+    "E4",
+    "F4",
+    "F#4",
+    "G4",
+    "G#4",
+    "A4",
+    "A#4",
+    "B4",
+    "C5",
+    "C#5",
+    "D5",
+    "D#5",
+    "E5",
+    "F5",
+    "F#5",
+    "G5",
+    "G#5",
+    "A5",
+    "A#5",
+    "B5",
+    "C6",
+    "C#6",
+    "D6",
+    "D#6",
+    "E6",
+    "F6",
+    "F#6",
+    "G6",
+    "G#6",
+    "A6",
+    "A#6",
+    "B6",
+    "C7",
+    "C#7",
+    "D7",
+    "D#7",
+    "E7"]
 
 var rt = 0;
 var lt = 0;
@@ -283,29 +283,37 @@ window.addEventListener('keyup', function (e) {
     if (e.code == 'Space') {
         if (rt == 1) {
             rt = 0;
+            document.getElementById("space").style.backgroundColor = "#0442c7";
         }
         else {
             rt = 1;
+            document.getElementById("space").style.backgroundColor = "rgb(202, 0, 88)";
         }
+        screen_update();
         return false;
     }
     if (e.code == 'Backquote') {
         if (lt == 1) {
             lt = 0;
+            document.getElementById("backslash").style.backgroundColor = "#0442c7";
         }
         else {
             lt = 1;
+            document.getElementById("backslash").style.backgroundColor = "rgb(202, 0, 88)";
         }
+        screen_update();
     }
     if (e.code == 'BracketLeft') {
         if (shifter > 0) {
             shifter--;
         }
+        screen_update();
     }
     if (e.code == 'BracketRight') {
         if (shifter < 12) {
             shifter++;
         }
+        screen_update();
     }
 });
 
@@ -432,3 +440,53 @@ window.addEventListener('keydown', function (e) {
         n[28 + rt * 12 + shifter].play(); 
     }
 });
+
+function screen_update () {
+    document.getElementById("button1").innerHTML = note_name[12 + lt * 12 + shifter];
+    document.getElementById("button2").innerHTML = note_name[13 + lt * 12 + shifter];
+    document.getElementById("button3").innerHTML = note_name[14 + lt * 12 + shifter];
+    document.getElementById("button4").innerHTML = note_name[15 + lt * 12 + shifter];
+    document.getElementById("button5").innerHTML = note_name[16 + lt * 12 + shifter];
+
+    document.getElementById("button6").innerHTML = note_name[24 + rt * 12 + shifter];
+    document.getElementById("button7").innerHTML = note_name[25 + rt * 12 + shifter];
+    document.getElementById("button8").innerHTML = note_name[26 + rt * 12 + shifter];
+    document.getElementById("button9").innerHTML = note_name[27 + rt * 12 + shifter];
+    document.getElementById("button0").innerHTML = note_name[28 + rt * 12 + shifter];
+
+    document.getElementById("buttonQ").innerHTML = note_name[8 + lt * 12 + shifter];
+    document.getElementById("buttonW").innerHTML = note_name[9 + lt * 12 + shifter];
+    document.getElementById("buttonE").innerHTML = note_name[10 + lt * 12 + shifter];
+    document.getElementById("buttonR").innerHTML = note_name[11 + lt * 12 + shifter];
+    document.getElementById("buttonT").innerHTML = note_name[12 + lt * 12 + shifter];
+
+    document.getElementById("buttonY").innerHTML = note_name[20 + rt * 12 + shifter];
+    document.getElementById("buttonU").innerHTML = note_name[21 + rt * 12 + shifter];
+    document.getElementById("buttonI").innerHTML = note_name[22 + rt * 12 + shifter];
+    document.getElementById("buttonO").innerHTML = note_name[23 + rt * 12 + shifter];
+    document.getElementById("buttonP").innerHTML = note_name[24 + rt * 12 + shifter];
+
+    document.getElementById("buttonA").innerHTML = note_name[4 + lt * 12 + shifter];
+    document.getElementById("buttonS").innerHTML = note_name[5 + lt * 12 + shifter];
+    document.getElementById("buttonD").innerHTML = note_name[6 + lt * 12 + shifter];
+    document.getElementById("buttonF").innerHTML = note_name[7 + lt * 12 + shifter];
+    document.getElementById("buttonG").innerHTML = note_name[8 + lt * 12 + shifter];
+
+    document.getElementById("buttonH").innerHTML = note_name[16 + rt * 12 + shifter];
+    document.getElementById("buttonJ").innerHTML = note_name[17 + rt * 12 + shifter];
+    document.getElementById("buttonK").innerHTML = note_name[18 + rt * 12 + shifter];
+    document.getElementById("buttonL").innerHTML = note_name[19 + rt * 12 + shifter];
+    document.getElementById("buttonSemi").innerHTML = note_name[20 + rt * 12 + shifter]
+
+    document.getElementById("buttonZ").innerHTML = note_name[0 + lt * 12 + shifter];
+    document.getElementById("buttonX").innerHTML = note_name[1 + lt * 12 + shifter];
+    document.getElementById("buttonC").innerHTML = note_name[2 + lt * 12 + shifter];
+    document.getElementById("buttonV").innerHTML = note_name[3 + lt * 12 + shifter];
+    document.getElementById("buttonB").innerHTML = note_name[4 + lt * 12 + shifter];
+
+    document.getElementById("buttonN").innerHTML = note_name[12 + rt * 12 + shifter];
+    document.getElementById("buttonM").innerHTML = note_name[13 + rt * 12 + shifter];
+    document.getElementById("buttonCom").innerHTML = note_name[14 + rt * 12 + shifter];
+    document.getElementById("buttonPer").innerHTML = note_name[15 + rt * 12 + shifter];
+    document.getElementById("buttonSlas").innerHTML = note_name[16 + rt * 12 + shifter];
+}

@@ -270,7 +270,7 @@ color: rgb(165, 165, 165);
     font-size: 25px;
     background-color: rgb(0, 221, 246);
 }
-.btn2{
+.btn2{/*for menu bar?*/
     border: none;
     cursor: pointer;
     outline: none;
@@ -304,7 +304,7 @@ color: rgb(165, 165, 165);
     transition: ease-out 0.3s;
 }
 
-.btn4{
+.btn4{/*for cooking menu*/
     border: none;
     cursor: pointer;
     outline: none;
@@ -325,7 +325,7 @@ color: rgb(165, 165, 165);
     background-color: rgb(201, 201, 201);
 }
 
-.btn5{
+.btn5{/*for cooking menu*/
     border: none;
     cursor: pointer;
     outline: none;
@@ -343,7 +343,7 @@ color: rgb(165, 165, 165);
     transition: ease-out 0.3s;
 }
 
-.btn6{
+.btn6{ /*for cooking menu with empty button?? not sure*/
     border: none;
     cursor: pointer;
     outline: none;
@@ -362,7 +362,27 @@ color: rgb(165, 165, 165);
     font-size: 15px;
     background-color: magenta;
 }
-
+.btn7{ /*for keyano*/
+    border: none;
+    cursor: pointer;
+    outline: none;
+    color: white;
+    text-align: center;
+    padding: 5px 10px;
+    width: 90px;
+    height: 50px;
+    font-size: 15px;
+    margin: 4px 2px;
+    background-color: var(--bgcol);
+    font-family: 'Audiowide';
+    border-radius: 10px;
+    --bgcol:#0442c7;
+    transition: ease-out 0.3s;
+}
+.btn2:hover{
+    font-size: 15px;
+    background-color: rgb(127, 0, 182);
+}
 .magentabtn{
     background-color: magenta;
 }
