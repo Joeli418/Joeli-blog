@@ -668,7 +668,7 @@ footer{
             background-color: var(--bgcol);
             font-family: "audiowide";
             border-radius: 10px;
-            background-color: #ae00ff;;
+            background-color: #ff006f;
             transition: ease-out 0.3s;
             margin-bottom: 2vw;
         }
@@ -678,7 +678,7 @@ footer{
         }
         .btn1:hover{
             font-size: 6vw;
-            background-color: rgb(0, 221, 246);
+            background-color: rgb(246, 115, 0);
         }        
     } 
 }
