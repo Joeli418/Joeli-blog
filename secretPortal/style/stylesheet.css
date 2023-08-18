@@ -98,6 +98,10 @@ body{
     padding-right: 3vw;
 }
 
+.flexbox_horizontal{
+    width: 30vw;
+}
+
 .gap{
     font-size: 24px;
     border: none;
@@ -475,7 +479,6 @@ contact ul{
 
 
 /*contact details*/
-/*tutors*/
 
 .hoverwhite{
     color:#9c9c9c;
@@ -488,9 +491,6 @@ contact ul{
     cursor: pointer;
 }
 
-price ul{
-    list-style: none;
-}
 
 
 .logo{
@@ -626,6 +626,9 @@ footer{
             font-size: 1.5vw;
             height: 80vh;
             padding-top: 5vh;
+        }
+        .flexbox_horizontal{
+            width: 70vw;
         }
         .tabletd{
             display: block;

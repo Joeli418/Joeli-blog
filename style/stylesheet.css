@@ -123,6 +123,13 @@ body{
     padding-left: 3vw;
     padding-right: 3vw;
 }
+.flexbox{
+    width: 25vw;
+    height: 40vh;
+}
+.flexbox_horizontal{
+    width: 30vw;
+}
 
 .gap{
     font-size: 24px;
@@ -512,16 +519,7 @@ contact ul{
     border-radius: 10%;
 }
 
-
-.flexbox-container{
-    display: flex;
-}
-
 /*main html*/
-
-
-/*contact details*/
-/*tutors*/
 
 .hoverwhite{
     color:#9c9c9c;
@@ -534,9 +532,7 @@ contact ul{
     cursor: pointer;
 }
 
-price ul{
-    list-style: none;
-}
+
 
 
 .logo{
@@ -670,8 +666,16 @@ footer{
     @media all and (max-width: 1000px) {
         footer{
             font-size: 1.5vw;
+            width: 100vw;
             height: 80vh;
             padding-top: 5vh;
+        }
+        .flexbox{
+            width: 80vw;
+            height: 60vw;
+        }
+        .flexbox_horizontal{
+            width: 70vw;
         }
         .tabletd{
             display: block;

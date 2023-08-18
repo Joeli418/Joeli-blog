@@ -5,6 +5,16 @@
 		<link rel="shortcut icon" type="image/jpeg" href="images/sig_tab_logo.png">
 		<link href="style/stylesheet.css" rel="stylesheet"/> 
 		<script src="js/script.js"></script>
+        <style>
+            .centerflex{
+                text-align: left;
+            }
+            @media all and (max-width: 1000px) {
+                .centerflex{
+                text-align: center;
+            }
+            }
+        </style>
 	</head>
 	<body>
 
@@ -19,11 +29,16 @@
             <h3>Music is the fourier transform of art!</h3>
 		</center>
 		
-		<div class="laptop_view">
+		<div >
             <div class="textbox">
                 <table class="center" style="width: 100%;">
+                    <tr><td>
+                        <img class="mobile_view" src= "images/piano.jpg" 
+                        style="border-radius:50px ; padding: 2vw;" height=300px boarder=3px>
+                    </td></tr>
                     <tr>
-                        <td style="width: 50%; text-align: left; padding-left: 2vw;">
+                        <td style="width: 50%; padding-left: 2vw;" class = "centerflex">
+                            
                             <h2>Piano</h2>
                             <p>
                                 I'm grade 8 in classical piano (ABRSM).
@@ -34,7 +49,7 @@
                             </p>
                             
                         </td>
-                        <td><img src= "images/piano.jpg" style="border-radius:50px ; padding: 2vw;" height=300px boarder=3px></td>
+                        <td class="laptop_view"><img src= "images/piano.jpg" style="border-radius:50px ; padding: 2vw;" height=300px boarder=3px></td>
                     </tr>
                 </table>
             </div>
@@ -42,50 +57,13 @@
             <div class="textbox">
                 <table class="center" style="width: 100%;">
                     <tr>
-                        <td><img src= "images/guitar.jpg" style="border-radius:50px ; padding: 2vw;" width=300px height=300px boarder=3px></td>
-                        <td style="width: 50%; text-align: left; padding-left: 2vw;">
-                            <h2>Guitar</h2>
-                            <p>
-                                I'm grade 5 in pop guitar (Rockschool).
-                            </p>
-                            <p>
-                                Repertoires includes: <br> 
-                                I Need Something (Newton Faulkner), Wanted Dead or Alive (Bon Jovi), Jerry's Brreakdown (Jerry Reed)
-                            </p>
-                            
-                        </td>
-                        
-                    </tr>
-                </table>
-            </div>
-        </div>
-
-        <div class="mobile_view">
-            <div class="textbox">
-                <table class="center">
-                    <tr>
-                        <td style="display: block; padding-top: 2vw;"><img src= "images/piano.jpg" style="border-radius:50px ;" height=300px boarder=3px></td>
-                        <td style="display: block;">
-                            <h2>Piano</h2>
-                            <p>
-                                I'm grade 8 in classical piano (ABRSM).
-                            </p>
-                            <p>
-                                Repertoires includes: <br> 
-                                Rondo Alla Turka (Mozart), Presto alla tedesca (Beethoven), Invention in A minor (Bach)
-                            </p>
-                            
-                        </td>
-                        
-                    </tr>
-                </table>
-            </div>
-
-            <div class="textbox">
-                <table class="center" style="width: 100%;">
-                    <tr>
-                        <td style="display: block; padding-top: 2vw;"><img src= "images/guitar.jpg" style="border-radius:50px;" width=300px height=300px boarder=3px></td>
-                        <td style="display: block;">
+                        <tr><td>
+                            <img class="mobile_view" src= "images/guitar.jpg" 
+                            style="border-radius:50px ; padding: 2vw;" width=300px height=300px boarder=3px>
+                        </td></tr>
+                        <td class="laptop_view"><img src= "images/guitar.jpg" style="border-radius:50px ; padding: 2vw;" 
+                            width=300px height=300px boarder=3px></td>
+                        <td style="width: 50%; padding-left: 2vw;" class = "centerflex">
                             <h2>Guitar</h2>
                             <p>
                                 I'm grade 5 in pop guitar (Rockschool).
@@ -103,7 +81,7 @@
         </div>
 
         <hr color="#c0c0c0" border-width="5px" style="margin: 3vw;">
-        <div class="textbox_purple">
+        <div class="textbox_purple" style="padding: 3vh;">
             <h2>My Music</h2>
             Here are some of the music I made.
             <br>
@@ -125,6 +103,7 @@
                 <source src="audios/loonwoods.mp3" type="audio/mpeg">
               Your browser does not support the audio element.
             </audio>
+            <br>
             <div style="padding: 2vw;">
                 For more, please text me.
             </div>

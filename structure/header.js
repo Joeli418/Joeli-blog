@@ -6,13 +6,14 @@ document.write("<header>")
 
 document.write("<img src= 'images/signiture.jpg' class='navlogo' height=100px width=100px boarder=3px>")
 document.write("<nav>")
-document.write("<ul>")
+document.write("    <ul>")
 document.write("        <li><a href='index.html'><button class='btn2'>Home</button></a></li>")
 document.write("        <li><a onclick='toggle_extension1()'><button class='btn2' id='aboutbtn'>About</button></a></li>")
 document.write("        <li><a href='games.html'><button class='btn2'>Games</button></a></li>")
-document.write("        <li><a href='contact.html'><button class='btn2'>Contact</button></a></li>")
+document.write("        <li><a onclick='toggle_extension2()'><button class='btn2' id='otherbtn'>Others</button></a></li>")
 document.write("    </ul>")
 document.write("</nav>")
+
 document.write("<xheader id='ext1'>")
 document.write("    <nav>")
 document.write("        <ul>")
@@ -31,6 +32,17 @@ document.write("            <li><a href='trash_trade.html'><button class='btn6' 
 document.write("        </ul>")
 document.write("    </nav>")	
 document.write("</xheader>")
+
+document.write("<xheader id='ext2'>")
+document.write("    <nav>")
+document.write("        <ul>")
+document.write("            <li><a><button class='abtn' id='otherbtn2' >Others</button></a></li>")
+document.write("            <li><a href='contact.html'><button class='btn6' id='contactbtn'>Contact</button></a></li>")
+document.write("            <li><a href='reference.html'><button class='btn6' id='referencebtn'>Ref</button></a></li>")
+document.write("        </ul>")
+document.write("    </nav>")	
+document.write("</xheader>")
+
 document.write("</header>")
 
 document.write("<div class='sidenav'  id='sidenav'>")
@@ -51,6 +63,7 @@ document.write("<a href='menu.html'>Food</a>")
 document.write("<a href='trash_trade.html'>Trades</a>")
 document.write("<a href='games.html'>Games</a>")
 document.write("<a href='contact.html'>Contact</a>")
+document.write("<a href='reference.html'>Reference</a>")
 
 document.write("</div>")
 

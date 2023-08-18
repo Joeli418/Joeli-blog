@@ -17,6 +17,10 @@ function toggle_extension1() {
         
     }
     else {
+        if(document.getElementById("ext2").style.display != "none") {
+            document.getElementById("ext2").style.display = "none";
+            document.getElementById("otherbtn").classList.remove("magentabtn");
+        }
         document.getElementById("ext1").style.display = "flex";
         document.getElementById("aboutbtn").classList.add("magentabtn");
         document.getElementById("craftbtn").classList.add("fadebtn");
@@ -27,6 +31,27 @@ function toggle_extension1() {
         document.getElementById("aboutbtn2").classList.add("slidebtn");
     }
 }
+
+function toggle_extension2() {
+    if (document.getElementById("ext2").style.display != "none") {
+        document.getElementById("ext2").style.display = "none";
+        document.getElementById("otherbtn").classList.remove("magentabtn");
+        
+    }
+    else {
+        if (document.getElementById("ext1").style.display != "none") {
+            document.getElementById("ext1").style.display = "none";
+            document.getElementById("aboutbtn").classList.remove("magentabtn");
+            
+        }
+        document.getElementById("ext2").style.display = "flex";
+        document.getElementById("otherbtn").classList.add("magentabtn");
+        document.getElementById("contactbtn").classList.add("fadebtn");
+        document.getElementById("referencebtn").classList.add("fadebtn");
+        document.getElementById("otherbtn2").classList.add("slidebtn");
+    }
+}
+
 
 
 
