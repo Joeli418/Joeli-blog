@@ -566,6 +566,18 @@ footer{
     padding-bottom: 3vw ;
 }
 
+.titlefont{
+    font-size: 3vw;
+    font-family: 'Audiowide';
+}
+
+
+@media all and (max-width: 1000px) {
+    .titlefont{
+        font-size: 5vw;
+        font-family: 'Audiowide';
+    }
+}
 
 @media all and (min-width: 1000px){
     .mobile_view{

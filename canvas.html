@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Joe Li </title>
+		<link rel="shortcut icon" type="image/jpeg" href="images/sig_tab_logo.png">
+		<link href="style/stylesheet.css" rel="stylesheet"/>
+        <link href="style/canvas.css" rel="stylesheet"/> 
+		<script src="js/script.js"></script>
+        <script src="js/canvas.js"></script>
+	</head>
+	<body>
+		
+		<script src="structure/header.js"></script>
+			
+		<br>
+        <meta name="viewport" content="user-scalable = 0">
+		<center>
+            <img src= "images/Canvas.jpeg" style="border-radius:50px ;" height=300px width=300px boarder=3px>
+			<h1 class="titlecontainer, titlefont">
+				Drawing Canvas
+			</h1>
+		</center>
+        <center>
+            <canvas class = "canvas" id="canvas1" onmouseover="inCanvas(1)" onmouseout="outCanvas(1)">
+            </canvas>
+
+            <canvas class = "canvas" id="canvas2" onmouseover="inCanvas(2)" onmouseout="outCanvas(2)">
+            </canvas>
+            
+			<div class = "textbox" style="padding: 2vw; margin: 4vw; font-size: 2vw;">
+				This is just a little spot for you to scribble.
+			</div>
+        </center>
+		
+
+		<hr color="#0032a8" border-width="5px">
+		
+		<br>
+		
+		<script src="structure/footer.js"></script>
+		
+	</body>
+</html>     
