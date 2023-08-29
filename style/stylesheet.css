@@ -676,6 +676,10 @@ footer{
 
     /*----------mobile devices----------*/
     @media all and (max-width: 1000px) {
+        .noPhoneScroll{
+            height: 100%;
+            overflow: hidden;
+        }
         footer{
             font-size: 1.5vw;
             width: 100vw;

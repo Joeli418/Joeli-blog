@@ -16,10 +16,12 @@ window.addEventListener("load", LoadNResize);
 window.addEventListener("resize", LoadNResize);
 
 function inCanvas(i) {
+    document.body.classList.add("noPhoneScroll");
     inCan[i - 1] = 1;
 }
 
 function outCanvas(i) {
+    document.body.classList.remove("noPhoneScroll");
     inCan[i - 1] = 0;
 }
 
