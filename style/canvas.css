@@ -7,3 +7,83 @@
     margin: 2vw;
     background: white;
 }
+.btncActive{
+    color: black;
+    background: white;
+}
+.btnc{
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 1px;
+    padding-right: 1px;
+    margin: 1px;
+    flex-wrap: wrap;
+    font-size: 1.8vw;
+    border: 4px solid black;
+    font-size:20px;
+    cursor: pointer;
+    outline: none;
+    
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    width: 7vh;
+    height: 7vh;
+    font-family: 'Audiowide';
+    border-radius: 10px;
+    transition: ease-out 0.3s;
+
+    background: rgb(0, 0, 0)
+}
+
+.btnu{/*universal buttons*/
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 1px;
+    padding-right: 1px;
+    margin: 1px;
+    flex-wrap: wrap;
+    font-size: 1.8vw;
+    border: 4px solid black;
+    font-size:20px;
+    cursor: pointer;
+    outline: none;
+    
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    width: 14vh;
+    height: 14vh;
+    font-family: 'Audiowide';
+    border-radius: 10px;
+    transition: ease-out 0.3s;
+
+    background: rgb(0, 0, 0)
+}
+.btncColorActive{
+    border: 4px solid white; 
+}
+
+.btncActive{
+    color: black;
+    background: white;
+}
+.btnuActive{
+    color: black;
+    background: white;
+}
+.btnc:hover{
+    background: rgb(90, 90, 90); 
+    border: 4px solid rgb(157, 157, 157); 
+}
+.btnu:hover{
+    background: rgb(90, 90, 90); 
+    border: 4px solid rgb(157, 157, 157); 
+}
+.btncActive:hover{
+    color: black;
+    background: white;
+    border: 4px solid black; 
+}
+.btncColorActive:hover{
+    border: 4px solid white; 
+}
+

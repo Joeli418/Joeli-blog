@@ -12,6 +12,7 @@
 		
 		<script src="structure/header.js"></script>
 			
+
 		<br>
         <meta name="viewport" content="user-scalable = 0">
 		<center>
@@ -22,14 +23,102 @@
 		</center>
         <center>
             <canvas class = "canvas" id="canvas1" onmouseover="inCanvas(1)" onmouseout="outCanvas(1)">
-            </canvas>
+            </canvas><br>
+            <button class = "btn1" onclick="showToolbar()">Toolbar (A)</button> <br>
+            
 
             <canvas class = "canvas" id="canvas2" onmouseover="inCanvas(2)" onmouseout="outCanvas(2)">
-            </canvas>
-            
+            </canvas><br>
+            <button class = "btn1" onclick="showToolbar()">Toolbar (A)</button> <br>
+
+            <canvas class = "canvas" id="canvas3" onmouseover="inCanvas(3)" onmouseout="outCanvas(3)">
+            </canvas><br>
+            <button class = "btn1" onclick="showToolbar()">Toolbar (A)</button> <br>
 			<div class = "textbox" style="padding: 2vw; margin: 4vw; font-size: 2vw;">
 				This is just a little spot for you to scribble.
 			</div>
+            <br>
+
+            <!--positioning-->
+            <!--https://www.w3schools.com/css/css_positioning.asp-->
+            <div id = "toolBar" style="display: none;">
+                <div style = 
+                "position: fixed;
+                padding: 2px;
+                border-radius: 10px ;
+                background: rgb(0, 143, 245);
+                bottom: 10vh;
+                left: 2vw;
+                display: inline-block;
+                border: 8px solid black">
+                    <table>
+                        <tr>
+                            <td><button onclick="setWidth(1)" class="btnc" id="btn1">1</button></td>
+                            <td><button onclick="setColor(1)" class="btnc" id="col1" style="background: red">q</button></td>
+                        </tr>
+                        <tr>
+                            <td><button onclick="setWidth(2)" class="btnc" id="btn2">2</button></td>
+                            <td><button onclick="setColor(2)" class="btnc" id="col2" style="background: orange">w</button></td>
+                        </tr>
+                        <tr>
+                            <td><button onclick="setWidth(3)" class="btnc" id="btn3">3</button></td>
+                            <td><button onclick="setColor(3)" class="btnc" id="col3" style="background: yellow; color: black">e</button></td>
+                        </tr>
+                        <tr>
+                            <td><button onclick="setWidth(4)" class="btnc" id="btn4">4</button></td>
+                            <td><button onclick="setColor(4)" class="btnc" id="col4" style="background: green">r</button></td>
+                        </tr>
+                        <tr>
+                            <td><button onclick="setWidth(5)" class="btnc" id="btn5">5</button></td>
+                            <td><button onclick="setColor(5)" class="btnc" id="col5" style="background: lime; color: black">t</button></td>
+                        </tr>
+                        <tr>
+                            <td><button onclick="setWidth(6)" class="btnc" id="btn6">6</button></td>
+                            <td><button onclick="setColor(6)" class="btnc" id="col6" style="background: cyan; color: black">y</button></td>
+                        </tr>
+                        <tr>
+                            <td><button onclick="setWidth(7)" class="btnc" id="btn7">7</button></td>
+                            <td><button onclick="setColor(7)" class="btnc" id="col7" style="background: blue">u</button></td>
+                        </tr>
+                        <tr>
+                            <td><button onclick="setWidth(8)" class="btnc" id="btn8">8</button></td>
+                            <td><button onclick="setColor(8)" class="btnc" id="col8" style="background: purple">i</button></td>
+                        </tr>
+                        <tr>
+                            <td><button onclick="setWidth(9)" class="btnc" id="btn9">9</button></td>
+                            <td><button onclick="setColor(9)" class="btnc" id="col9" style="background: magenta">o</button></td>
+                        </tr>
+                        <tr>
+                            <td><button onclick="setWidth(10)" class="btnc" id="btn10">0</button></td>
+                            <td><button onclick="setColor(10)" class="btnc" id="col10" style="background: black">p</button></td>
+                        </tr>
+                    </table>
+                </div>
+                <div style = 
+                "position: fixed;
+                padding: 2px;
+                border-radius: 10px ;
+                background: rgb(0, 143, 245);
+                bottom: 10vh;
+                right: 2vw;
+                display: inline-block;
+                border: 8px solid black">
+                    <table>
+                        <tr>
+                            <td><button onclick="showToolbar()" class="btnu" id="toolbar">Toolbar (A)</button></td>
+                        </tr>
+                        <tr>
+                            <td><button onclick="eraserToggle();" class="btnu" id="eraser">Eraser (S)</button></td>
+                        </tr>
+                        <tr>
+                            <td><button class="btnu" id="draw">Draw (D)</button></td>
+                        </tr>
+                        <tr>
+                            <td><button onclick="LoadNResize();" class="btnu" id="clear">Clear (C)</button></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
         </center>
 		
 
