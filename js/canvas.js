@@ -41,6 +41,7 @@ function outCanvas(i) {
 }
 
 function LoadNResize () {
+    console.log(canvas.length) ;
     for (i = 0; i < NOC; i++) {
         canvas = document.querySelector(canvas_list[i]);
         (ctx[i]) = canvas.getContext('2d');
