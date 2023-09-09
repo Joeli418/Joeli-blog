@@ -41,7 +41,6 @@ function outCanvas(i) {
 }
 
 function LoadNResize () {
-    console.log(canvas.length) ;
     for (i = 0; i < NOC; i++) {
         canvas = document.querySelector(canvas_list[i]);
         (ctx[i]) = canvas.getContext('2d');
@@ -95,7 +94,6 @@ function endPosition () {
 }
 
 function draw (e) {
-    
     for (let j = 0; j < NOC; j++) {
     if (drawing && mobile && inCan[j]) {
         if (eraser ==  true) {
@@ -115,6 +113,7 @@ function draw (e) {
         (ctx[j]).stroke();
         (ctx[j]).beginPath();
         (ctx[j]).moveTo(e.offsetX, e.offsetY);
+        
     }
     }
 }
