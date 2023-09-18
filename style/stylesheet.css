@@ -32,7 +32,9 @@
     padding-bottom: 1px;
     padding-left: 3vw;
     padding-right: 3vw;
-    background: linear-gradient(rgb(191, 40, 194) 0%, rgb(213, 0, 152) 100%);
+    /*background: linear-gradient(rgb(191, 40, 194) 0%, rgb(213, 0, 152) 100%);
+    */
+    background: linear-gradient(rgb(0, 60, 255) 0%, rgb(0, 7, 213) 100%);
     border-radius: 20px;
     margin-left: 5vw;
     margin-right: 5vw;
@@ -60,7 +62,7 @@
     padding-bottom: 1px;
     padding-left: 3vw;
     padding-right: 3vw;
-    background: linear-gradient(rgb(52, 209, 252) 0%, rgb(0, 81, 255) 100%);
+    background: linear-gradient(rgb(52, 209, 252) 0%, rgb(0, 102, 255) 100%);
     border-radius: 20px;
     margin-left: 5vw;
     margin-right: 5vw;
@@ -111,8 +113,8 @@ body{
     margin-right: 0;
     margin-bottom: 0;
     margin-top: 0.5vw;
-    background: linear-gradient(#00487C 0%, rgb(0, 0, 88) 79%);
-    font-family: Berlin Sans FB;
+    background: linear-gradient(rgb(0, 0, 143) 0%, rgb(0, 0, 88) 79%);
+    font-family: century-gothic, sans-serif;
     font-size: 20px;
     color: #c0c0c0;
     overflow-x: hidden;
@@ -146,7 +148,7 @@ body{
 }
 
 p{
-    font-family: PT-serif;
+    font-family: century-gothic, sans-serif;
     margin-right: 3vw;
 }
 
@@ -169,7 +171,7 @@ xheader{
     margin-right: 5vw;
 }
 header{
-    background-color: #0466c8;
+    background-color: #0045f3;
     border-radius: 20px;
     margin-left: 5vw;
     margin-right: 5vw;
@@ -234,7 +236,7 @@ nav li{
     transition: ease-out 0.3s;
     margin-bottom: 2vw;
 
-    background: rgb(191, 40, 194)
+    background: rgb(0, 3, 192)
 }
 a:link {
     color: rgb(228, 228, 228);
@@ -271,11 +273,11 @@ color: rgb(165, 165, 165);
     transition: ease-out 0.3s;
     margin-bottom: 2vw;
 
-    background-color: rgb(191, 40, 194);
+    background-color: rgb(0, 94, 255);
 }
 .btn1:hover{
     font-size: 25px;
-    background-color: rgb(0, 221, 246);
+    background-color: rgb(107, 181, 255);
 }
 .btn2{/*for menu bar?*/
     border: none;
@@ -291,7 +293,7 @@ color: rgb(165, 165, 165);
     background-color: var(--bgcol);
     font-family: 'Audiowide';
     border-radius: 10px;
-    --bgcol:#0442c7;
+    --bgcol:#0a04c7;
     transition: ease-out 0.3s;
 }
 .btn2:hover{
