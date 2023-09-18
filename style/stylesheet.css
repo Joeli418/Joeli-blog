@@ -236,7 +236,7 @@ nav li{
     transition: ease-out 0.3s;
     margin-bottom: 2vw;
 
-    background: rgb(0, 3, 192)
+    background: rgb(0, 3, 192);
 }
 a:link {
     color: rgb(228, 228, 228);
@@ -639,7 +639,7 @@ footer{
     }
     .btn:hover{
         font-size: 100%;
-        background-color: rgb(181, 3, 164);
+        background-color: rgb(2, 159, 232);
     }
     .sidenav {
         height: 100%;
@@ -717,7 +717,7 @@ footer{
             margin: 4px 2px;
             font-family: "audiowide";
             border-radius: 10px;
-            background: rgb(191, 40, 194);
+            background: rgb(0, 3, 192);
             transition: ease-out 0.3s;
             margin-bottom: 2vw;
             
@@ -736,7 +736,7 @@ footer{
             background-color: var(--bgcol);
             font-family: "audiowide";
             border-radius: 10px;
-            background-color: rgb(191, 40, 194);
+            background-color: rgb(0, 94, 255);
             transition: ease-out 0.3s;
             margin-bottom: 2vw;
         }
@@ -746,7 +746,7 @@ footer{
         }
         .btn1:hover{
             font-size: 6vw;
-            background-color: rgb(0, 221, 246);
+            background-color: rgb(107, 181, 255);
         }        
     } 
 }
