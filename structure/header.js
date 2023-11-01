@@ -4,7 +4,7 @@ var page = path.split("/").pop();
 
 document.write("<header>")
 
-document.write("<img src= 'images/signiture.jpg' class='navlogo' height=100px width=100px boarder=3px>")
+document.write("<img src= 'images/sig_tab_logo.png' class='navlogo' height=100px width=100px boarder=3px>")
 document.write("<nav>")
 document.write("    <ul>")
 document.write("        <li><a href='index.html'><button class='btn2'>Home</button></a></li>")
