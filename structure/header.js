@@ -24,9 +24,9 @@ if (page == "about.html") {
 else {
     document.write("            <li><a href='about.html'><button class='abtn' id='aboutbtn2' >About</button></a></li>")
 }
-document.write("            <li><a href='magicCraft.html'><button class='btn6' id='craftbtn'>Projects</button></a></li>")
-document.write("            <li><a href='musicMagic.html'><button class='btn6' id='musicbtn'>Music</button></a></li>")
-document.write("            <li><a href='friendshipMagic.html'><button class='btn6' id='friendsbtn'>Friends</button></a></li>")
+document.write("            <li><a href='projects.html'><button class='btn6' id='craftbtn'>Projects</button></a></li>")
+document.write("            <li><a href='music.html'><button class='btn6' id='musicbtn'>Music</button></a></li>")
+document.write("            <li><a href='friends.html'><button class='btn6' id='friendsbtn'>Friends</button></a></li>")
 document.write("            <li><a href='menu.html'><button class='btn6' id='foodbtn'>Food</button></a></li>")
 document.write("            <li><a href='trash_trade.html'><button class='btn6' id='tradebtn'>Trades</button></a></li>")
 document.write("        </ul>")
@@ -56,9 +56,9 @@ else {
 }
 
 
-document.write("<a href='magicCraft.html'>Projects</a>")
-document.write("<a href='musicMagic.html'>Music</a>")
-document.write("<a href='friendshipMagic.html'>Friends</a>")
+document.write("<a href='projects.html'>Projects</a>")
+document.write("<a href='music.html'>Music</a>")
+document.write("<a href='friends.html'>Friends</a>")
 document.write("<a href='menu.html'>Food</a>")
 document.write("<a href='trash_trade.html'>Trades</a>")
 document.write("<a href='games.html'>Games</a>")

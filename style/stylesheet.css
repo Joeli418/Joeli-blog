@@ -98,6 +98,27 @@
     flex-wrap: wrap;
     color: #dadada;
 }
+.textbox_academics{
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    /*background: linear-gradient(rgb(191, 40, 194) 0%, rgb(213, 0, 152) 100%);
+    */
+    background: silver;
+    
+    border-radius: 20px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 2vw;
+    text-align: center;
+    flex-wrap: wrap;
+    color: #000000;
+    transition: ease-out 0.3s;
+}
+.textbox_academics:hover{
+    background-color: #FFDD00;
+}
 
 
 .titlecontainer{
@@ -147,7 +168,9 @@ body{
 .flexbox_horizontal{
     width: 30vw;
 }
-
+a {
+    text-decoration: none;
+  }
 .gap{
     font-size: 24px;
     border: none;
