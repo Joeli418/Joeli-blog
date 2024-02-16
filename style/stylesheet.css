@@ -27,6 +27,9 @@
 }
 
 /*----------textboxs----------*/
+.textbox_rtl{
+    direction: rtl;
+}
 .textbox{
     padding-top: 1px;
     padding-bottom: 1px;
@@ -474,6 +477,7 @@ color: rgb(165, 165, 165);
     background-color: rgb(26, 255, 0);
 }
 
+/* Animations */
 .slidebtn {
     animation-name: slidein;
     background-color: magenta;
@@ -521,8 +525,7 @@ color: rgb(165, 165, 165);
     100% {background-color: rgb(216, 0, 76);
         margin: 4px 0px;
         width: 90px;
-        color: white;
-        
+        color: white;  
     }
   }
   .slidebtn2:hover{
@@ -550,7 +553,38 @@ color: rgb(165, 165, 165);
         margin: 4px 2px;
         color: white;
     }
-  }
+}
+
+.animation_small_right{
+    opacity: 0;
+    transform: translateX(1.2vw);
+    transition: all 0.5s ease-out;
+    transition-delay: 0.3s;
+}
+.animation_small_left{
+    opacity: 0;
+    transform: translateX(-1.2vw);
+    transition: all 0.5s ease-out;
+    transition-delay: 0.3s;
+}
+.animation_small_top{
+    opacity: 0;
+    transform: translateY(1.4vh);
+    transition: all 0.7s ease-out;
+    transition-delay: 0.3s;
+}
+.animation_big_left{
+    opacity: 0;
+    transform: translateX(-5vw);
+    transition: all 0.5s ease-out;
+    transition-delay: 0.3s;
+}
+.animation_appear{
+    opacity: 1;
+    transform: translateX(0);
+    transform: translateY(0);
+}
+
 
 contact ul{
     list-style: none;
@@ -733,9 +767,11 @@ footer{
         .flexbox_horizontal{
             width: 70vw;
         }
+        
         .tabletd{
             display: block;
         }
+        
         .logo{
             border-radius: 30px;
             height: 60vw;

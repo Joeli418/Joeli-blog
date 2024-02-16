@@ -52,9 +52,6 @@ function toggle_extension2() {
     }
 }
 
-
-
-
 function discordUsername() {
     // Copy the text inside the text field
     navigator.clipboard.writeText("joeli418#9115");
