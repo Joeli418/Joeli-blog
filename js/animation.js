@@ -10,8 +10,6 @@ const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
             entry.target.classList.add('animation_appear');
-        } else {
-            entry.target.classList.remove('animation_appear');
         }
     })},
     {threshold: 0.3}
