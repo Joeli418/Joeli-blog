@@ -122,6 +122,10 @@
 .textbox_academics:hover{
     background-color: #FFDD00;
 }
+.textbox_button:hover{
+    transform: translateY(-1.05vh);
+    transition: all 0.3s ease-in-out;
+}
 
 
 .titlecontainer{
