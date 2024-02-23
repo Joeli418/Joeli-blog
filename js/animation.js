@@ -3,7 +3,8 @@
 const asr_animation = document.querySelectorAll('.animation_small_right');
 const asl_animation = document.querySelectorAll('.animation_small_left');
 const ast_animation = document.querySelectorAll('.animation_small_top');
-const abl_animation = document.querySelectorAll('.animation_big_left')
+const abl_animation = document.querySelectorAll('.animation_big_left');
+const fade_animation = document.querySelectorAll('.animation_fade')
 
 const observer = new IntersectionObserver((entries) => {
     
@@ -26,4 +27,7 @@ for (let i = 0; i < ast_animation.length; i++) {
 }
 for (let i = 0; i < abl_animation.length; i++) {
     observer.observe(abl_animation[i]);
+}
+for (let i = 0; i < fade_animation.length; i++) {
+    observer.observe(fade_animation[i]);
 }
