@@ -19,79 +19,122 @@
 
     	<h3 class="margpad">Basics</h3>
     	<hr color="#c0c0c0" border-width="5px">
-			<div class="textbox_read animation_small_left">
-				<table class="center" style="width: 100%;">
-					<tr>
-						<td class = "tabletd" width="50%">
-							<h2>assign</h2>
-							<p>Use assign to quickly construct a logic gate structure</p>
-							<br>
-							<p>
-								note these logical operators
-								<ul>
-									<li>AND: &</li>
-									<li>OR: ^</li>
-									<li>NOT: ~</li>
-									<li>XOR: ^</li>
-								</ul>
-								Use paranthesis "()" to indicate order
-							</p>
-						</td>
-						<td class = "tabletd">
-							<img src= "Images/Verilog/assign.png" style="border-radius:50px ; padding: 2vw;" width="100%" boarder=3px><br>
-							<img src= "Images/Verilog/assignsch.png" style="border-radius:50px ; padding: 2vw;" width="100%" boarder=3px>
-						</td>
-					</tr>
-				</table>
-			</div>
-			<div class="textbox_read animation_small_left">
-				<table class="center" style="width: 100%;">
-					<tr>
-						<td class = "tabletd" width="50%">
-							<h2>module</h2>
-							<p>Module is an object that can be reused.</p>
-							<p>Start by declaring your input and output in the paranthesis and giving your module a name.</p>
-							<p>Inside the module, write whatever logic you want inside the module.</p>
-							<br>
-							<p>By having this module, now you created this block which you can use in other logic circuits</p>
-							
+		<div class="textbox_read animation_small_left">
+			<table class="center" style="width: 100%;">
+				<tr>
+					<td class = "tabletd" width="50%">
+						<h2>wire</h2>
+						<p>Every circuit contains wires of some form</p>
+						<p>
+							if you're going to write code for your computer to form a circuit, you need to give your wires names
+							so your computer knows which wire to put where. Please declare your wires by giving them names.
+						</p>
+						<p>Input and output wires are exception. You will name them in the paranthesis of a <i>module</i>.</p>
+					</td>
+					<td class = "tabletd">
+						<img src= "Images/Verilog/wire.png" style="border-radius:50px ; padding: 2vw;" width="100%" boarder=3px><br>
+						<img src= "Images/Verilog/wirereal.png" style="border-radius:50px ; padding: 2vw;" width="100%" boarder=3px>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="textbox_read animation_small_left">
+			<table class="center" style="width: 100%;">
+				<tr>
+					<td class = "tabletd" width="50%">
+						<h2>Default Modules</h2>
+						<p>
+							Here are some default modules you can use</p>
+						<p>
+							When using a module, please instantiate to give it a name and purpose in life.
+						</p>
+						<p>
+							Type the gate you're using (e.g. and, or, not, nand) and type the name. Then for the first parameter inside the paranthesis, type in the output.
+							Then type in all the inputs (you can have as many inputs as you want).
+						</p>
 
-							
-							<br>
-						</td>
-						<td class = "tabletd">
-							<img src= "Images/Verilog/module.png" style="border-radius:50px ; padding: 2vw;" width="100%" boarder=3px><br>
-							<img src= "Images/Verilog/modulesch.png" style="border-radius:50px ; padding: 2vw;" width="100%" boarder=3px>
-						</td>
-					</tr>
-				</table>
-			</div>
-			<div class="textbox_read animation_small_left">
-				<table class="center" style="width: 100%;">
-					<tr>
-						<td class = "tabletd" width="50%">
-							<h2>Instantiation</h2>
-							
-							<p>
-								In verilog, each module needs a name such that the module finds itself a unique place in the hierarchy
-							</p>
-							<p>
-								Following myModule from the previous section in <i>module</i>, we can instantiate by stating the module name,
-								the instance name. And inside the paranthesis, enter all the wires corresponding to 
-								how you define the module inputs and outputs
-							</p>
-							<b>What is Instantiation</b>
-							<p>let's say inside your wardrobe, you have alot teddy bears. 🧸🧸🧸🧸</p>
-							<p>to uniquely identify each teddy bear, each teddy bear needs a name, like "Bob🧸", "Fred🧸", "Sam🧸".</p>
-							<br>
-						</td>
-						<td class = "tabletd">
-							<img src= "Images/Verilog/Instantiate.png" style="border-radius:50px ; padding: 2vw;" width="100%" boarder=3px><br>
-							<img src= "Images/Verilog/Instantiatesch.png" style="border-radius:50px ; padding: 2vw;" width="100%" boarder=3px>
-						</td>
-					</tr>
-				</table>
-			</div>
+						<b>What is Instantiation</b>
+						<p>let's say inside your wardrobe, you have alot teddy bears. 🧸🧸🧸🧸</p>
+						<p>to uniquely identify each teddy bear, each teddy bear needs a name, like "Bob🧸", "Fred🧸", "Sam🧸".</p>
+					</td>
+					<td class = "tabletd">
+						<img src= "Images/Verilog/defaultmodule.png" style="border-radius:50px ; padding: 2vw;" width="100%" boarder=3px><br>
+						<img src= "Images/Verilog/defaultmodulesch.png" style="border-radius:50px ; padding: 2vw;" width="100%" boarder=3px>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="textbox_read animation_small_left">
+			<table class="center" style="width: 100%;">
+				<tr>
+					<td class = "tabletd" width="50%">
+						<h2>assign</h2>
+						<p>Use assign to quickly construct a logic gate structure</p>
+						<br>
+						<p>
+							note these logical operators
+							<ul>
+								<li>AND: &</li>
+								<li>OR: ^</li>
+								<li>NOT: ~</li>
+								<li>XOR: ^</li>
+							</ul>
+							Use paranthesis "()" to indicate order
+						</p>
+					</td>
+					<td class = "tabletd">
+						<img src= "Images/Verilog/assign.png" style="border-radius:50px ; padding: 2vw;" width="100%" boarder=3px><br>
+						<img src= "Images/Verilog/assignsch.png" style="border-radius:50px ; padding: 2vw;" width="100%" boarder=3px>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="textbox_read animation_small_left">
+			<table class="center" style="width: 100%;">
+				<tr>
+					<td class = "tabletd" width="50%">
+						<h2>Custom modules</h2>
+						<p>Module is an object that can be reused.</p>
+						<p>Start by declaring your input and output in the paranthesis and giving your module a name.</p>
+						<p>Inside the module, write whatever logic you want inside the module.</p>
+						<br>
+						<p>By having this module, now you created this block which you can use in other logic circuits</p>
+						
+
+						
+						<br>
+					</td>
+					<td class = "tabletd">
+						<img src= "Images/Verilog/module.png" style="border-radius:50px ; padding: 2vw;" width="100%" boarder=3px><br>
+						<img src= "Images/Verilog/modulesch.png" style="border-radius:50px ; padding: 2vw;" width="100%" boarder=3px>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="textbox_read animation_small_left">
+			<table class="center" style="width: 100%;">
+				<tr>
+					<td class = "tabletd" width="50%">
+						<h2>Instantiation</h2>
+						
+						<p>
+							In verilog, each module needs a name such that the module finds itself a unique place in the hierarchy
+						</p>
+						<p>
+							Following myModule from the previous section in <i>module</i>, we can instantiate by stating the module name,
+							the instance name. And inside the paranthesis, enter all the wires corresponding to 
+							how you define the module inputs and outputs
+						</p>
+						
+						<br>
+					</td>
+					<td class = "tabletd">
+						<img src= "Images/Verilog/Instantiate.png" style="border-radius:50px ; padding: 2vw;" width="100%" boarder=3px><br>
+						<img src= "Images/Verilog/Instantiatesch.png" style="border-radius:50px ; padding: 2vw;" width="100%" boarder=3px>
+					</td>
+				</tr>
+			</table>
+		</div>
 
 		<hr color="#0032a8" border-width="5px">
 		
