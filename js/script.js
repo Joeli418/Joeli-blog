@@ -6,10 +6,6 @@ function closesidenav() {
     document.getElementById("sidenav").style.width = "0";
 }
 
-
-window.onload = function() {
-    document.getElementById("ext1").style.display = "none";
-}
 function toggle_extension1() {
     if (document.getElementById("ext1").style.display != "none") {
         document.getElementById("ext1").style.display = "none";
@@ -49,6 +45,19 @@ function toggle_extension2() {
         document.getElementById("contactbtn").classList.add("fadebtn");
         document.getElementById("referencebtn").classList.add("fadebtn");
         document.getElementById("otherbtn2").classList.add("slidebtn");
+    }
+}
+
+function toggleDropdown(buttonID) {
+    const content = buttonID.parentElement.nextElementSibling.nextElementSibling;
+    if (content.style.display == "none") {
+        content.style.display = "block";
+        buttonID.classList.add("showBtn")
+        buttonID.innerHTML = "Hide"
+    } else {
+        content.style.display = "none"
+        buttonID.classList.remove("showBtn")
+        buttonID.innerHTML = "Show"
     }
 }
 

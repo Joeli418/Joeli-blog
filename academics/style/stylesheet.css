@@ -155,6 +155,7 @@
     color: #000000;
     transition: ease-out 0.3s;
 }
+
 .textbox_button:hover{
     background-color: #2E5EAA;
     color: #dadada;
@@ -396,7 +397,7 @@ color: rgb(165, 165, 165);
     border: none;
     cursor: pointer;
     outline: none;
-    color: rgb(0, 0, 0);
+    color: #131515;
     text-align: center;
     padding: 5% 10%;
     width: 40%;
@@ -417,7 +418,7 @@ color: rgb(165, 165, 165);
     border: none;
     cursor: pointer;
     outline: none;
-    color: rgb(0, 0, 0);
+    color: #131515;
     text-align: center;
     padding: 5% 10%;
     width: 80%;
@@ -510,6 +511,52 @@ color: rgb(165, 165, 165);
     font-size: 15px;
     background-color: rgb(26, 255, 0);
 }
+
+.hideBtn{/*for menu bar?*/
+    border: none;
+    cursor: pointer;
+    outline: none;
+    color: white;
+    text-align: center;
+    padding: 5px 10px;
+    width: 90px;
+    height: 30px;
+    font-size: 15px;
+    margin: 4px 2px;
+    background-color: var(--bgcol);
+    font-family: 'Audiowide';
+    border-radius: 10px;
+    --bgcol:#009FFD;
+    transition: ease-out 0.3s;
+}
+.hideBtn:hover{
+    --bgcol:#FFDD00;
+}
+.showBtn{/*for menu bar?*/
+    border: none;
+    cursor: pointer;
+    outline: none;
+    color: #131515;
+    text-align: center;
+    padding: 5px 10px;
+    width: 90px;
+    height: 50px;
+    font-size: 15px;
+    margin: 4px 2px;
+    background-color: var(--bgcol);
+    font-family: 'Audiowide';
+    border-radius: 10px;
+    --bgcol:#FFDD00;
+    transition: ease-out 0.3s;
+}
+.showBtn:hover{
+    --bgcol:#009FFD;
+}
+
+
+
+
+
 
 .animation_small_right{
     opacity: 0;
@@ -638,7 +685,9 @@ contact ul{
     color: white;
     cursor: pointer;
 }
-
+.tabletd{
+    width: 50%;
+}
 
 
 
@@ -753,7 +802,7 @@ footer{
         z-index: 1;
         top: 0;
         left: 0;
-        background-color: rgb(0, 0, 0);
+        background-color: #131515;
         overflow-x: hidden;
         transition: 0.5s;
         padding-top: 60px;
@@ -801,6 +850,7 @@ footer{
             width: 70vw;
         }
         .tabletd{
+            width: 100%;
             display: block;
         }
         .logo{
