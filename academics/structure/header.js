@@ -16,7 +16,7 @@ document.write("</header>")
 
 document.write("<div class='sidenav'  id='sidenav'>")
 
-
+document.write("<a class='closebtn' onclick='closesidenav()'>&times;</a>")
 document.write("<a href='home.html'>Home</a>")
 document.write("<a href='../index.html'>Main</a>")
 
