@@ -1,4 +1,5 @@
 
+
 ::selection {
     background: rgba(3, 49, 255, 0.517);
     color: beige;
@@ -479,6 +480,48 @@ color: rgb(165, 165, 165);
 .Dbtn:hover{
     font-size: 15px;
     background-color: rgb(26, 255, 0);
+}
+
+.hideBtn{/*for menu bar?*/
+    border: none;
+    cursor: pointer;
+    outline: none;
+    color: white;
+    text-align: center;
+    padding: 5px 10px;
+    width: 90px;
+    height: 50px;
+    font-size: 15px;
+    margin: 4px 2px;
+    background-color: var(--bgcol);
+    font-family: 'Audiowide';
+    border-radius: 10px;
+    --bgcol:#009FFD;
+    transition: ease-out 0.3s;
+}
+.hideBtn:hover{
+    --bgcol:#FFDD00;
+}
+
+.showBtn{/*for menu bar?*/
+    border: none;
+    cursor: pointer;
+    outline: none;
+    color: #131515;
+    text-align: center;
+    padding: 5px 10px;
+    width: 90px;
+    height: 50px;
+    font-size: 15px;
+    margin: 4px 2px;
+    background-color: var(--bgcol);
+    font-family: 'Audiowide';
+    border-radius: 10px;
+    --bgcol:#FFDD00;
+    transition: ease-out 0.3s;
+}
+.showBtn:hover{
+    --bgcol:#009FFD;
 }
 
 /* Animations */

@@ -1,3 +1,5 @@
+/* #FFDD00 #131515 #009FFD #2E5EAA #E6FAFC */
+
 
 ::selection {
     background: rgba(3, 49, 255, 0.517);
@@ -27,6 +29,9 @@
 }
 
 /*----------textboxs----------*/
+.textbox_rtl{
+    direction: rtl;
+}
 .textbox{
     padding-top: 1px;
     padding-bottom: 1px;
@@ -39,6 +44,21 @@
     margin-right: 5vw;
     margin-top: 2vw;
     text-align: center;
+    flex-wrap: wrap;
+    color: #131515;
+}
+.textbox_read{
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    /*background: linear-gradient(rgb(191, 40, 194) 0%, rgb(213, 0, 152) 100%);
+    */
+    background: #FFDD00;;
+    border-radius: 20px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 2vw;
     flex-wrap: wrap;
     color: #131515;
 }
@@ -137,6 +157,7 @@
     color: #000000;
     transition: ease-out 0.3s;
 }
+
 .textbox_button:hover{
     background-color: #2E5EAA;
     color: #dadada;
@@ -378,7 +399,7 @@ color: rgb(165, 165, 165);
     border: none;
     cursor: pointer;
     outline: none;
-    color: rgb(0, 0, 0);
+    color: #131515;
     text-align: center;
     padding: 5% 10%;
     width: 40%;
@@ -399,7 +420,7 @@ color: rgb(165, 165, 165);
     border: none;
     cursor: pointer;
     outline: none;
-    color: rgb(0, 0, 0);
+    color: #131515;
     text-align: center;
     padding: 5% 10%;
     width: 80%;
@@ -492,6 +513,52 @@ color: rgb(165, 165, 165);
     font-size: 15px;
     background-color: rgb(26, 255, 0);
 }
+
+.hideBtn{/*for menu bar?*/
+    border: none;
+    cursor: pointer;
+    outline: none;
+    color: white;
+    text-align: center;
+    padding: 5px 10px;
+    width: 90px;
+    height: 30px;
+    font-size: 15px;
+    margin: 4px 2px;
+    background-color: var(--bgcol);
+    font-family: 'Audiowide';
+    border-radius: 10px;
+    --bgcol:#009FFD;
+    transition: ease-out 0.3s;
+}
+.hideBtn:hover{
+    --bgcol:#FFDD00;
+}
+.showBtn{/*for menu bar?*/
+    border: none;
+    cursor: pointer;
+    outline: none;
+    color: #131515;
+    text-align: center;
+    padding: 5px 10px;
+    width: 90px;
+    height: 50px;
+    font-size: 15px;
+    margin: 4px 2px;
+    background-color: var(--bgcol);
+    font-family: 'Audiowide';
+    border-radius: 10px;
+    --bgcol:#FFDD00;
+    transition: ease-out 0.3s;
+}
+.showBtn:hover{
+    --bgcol:#009FFD;
+}
+
+
+
+
+
 
 .animation_small_right{
     opacity: 0;
@@ -620,7 +687,9 @@ contact ul{
     color: white;
     cursor: pointer;
 }
-
+.tabletd{
+    width: 50vw;
+}
 
 
 
@@ -735,7 +804,7 @@ footer{
         z-index: 1;
         top: 0;
         left: 0;
-        background-color: rgb(0, 0, 0);
+        background-color: #131515;
         overflow-x: hidden;
         transition: 0.5s;
         padding-top: 60px;
@@ -783,6 +852,7 @@ footer{
             width: 70vw;
         }
         .tabletd{
+            width: 100%;
             display: block;
         }
         .logo{
