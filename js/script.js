@@ -63,7 +63,7 @@ function toggleDropdown(buttonID) {
 
 function discordUsername() {
     // Copy the text inside the text field
-    navigator.clipboard.writeText("joeli418#9115");
+    navigator.clipboard.writeText("joe_li");
     // Alert the copied text
-    alert("Copied discord username: " + "joeli418#9115");
+    alert("Copied discord username: " + "joe_li");
 }
