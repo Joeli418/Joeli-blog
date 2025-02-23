@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Thesis A </title>
+		<link rel="shortcut icon" type="../../../../../image/jpeg" href="../../../../../images/sig_tab_logo.png">
+		<link href="../../../../../style/stylesheet.css" rel="stylesheet"/> 
+		<script src="../../../../../js/script.js"></script>
+	</head>
+	<body>
+
+		<script src="structure/header.js"></script>
+
+		<br>
+		<center>
+			
+			<h1 class="titlecontainer">
+				Thesis A papers
+			</h1>
+		</center>
+		
+		<hr color="#0032a8" border-width="5px">
+
+		<center>
+			<h2 >
+				Google Scholar Shortcut
+			</h2>
+			<input type="text" id="search" 
+			style="
+            width: 40vw; 
+            height: 8vh; 
+            background-color: white; 
+            border-radius: 15px; 
+            font-family: sans-serif; 
+            font-size: x-large;
+            text-align: center;
+            padding: 10px;
+			margin: 10px" 
+			value=""><br>
+			<button class="btn1" border="none" onclick="searchScholar()">Google Scholar</button>
+		</center>
+		<div class="textbox animation_small_top">
+			<h3>Multi-Level Logic Circuits</h3>
+			<p>This is a collection of papers I will and have read for Thesis A</p>
+		</div>
+
+		<a href="https://www.mdpi.com/2079-9292/9/1/12" target=”_blank”><div class="textbox_academics animation_small_top textbox_button">
+			<h3>Application of Generalized Reed–Muller Expression for Development of Non-Binary Circuits</h3>
+			<p>
+				This paper talks about programmable logic arrays in non-binary logic. Where a unit block
+				is made from a memory section and a logic section. The memory section uses Ferroelectric
+				elements and the logic section uses generalized Reed-Muller expression.
+			</p>
+		</div></a>
+
+		<a href="https://onlinelibrary.wiley.com/doi/full/10.1155/2014/534587" target=”_blank”><div class="textbox_academics animation_small_top textbox_button">
+			<h3>High-Efficient Circuits for Ternary Addition</h3>
+			<p>
+				This paper puts a little more focus on speed and power consumption over number of transistors
+				It mentions the use of CNTFET technology and it's performance over MOSFET when it comes to 
+				ternary logic design. It also proposed a TFA (ternary full adder) schematic and compares it
+				with two prveiously proposed TFA to compare with, showing it has better performance.
+			</p>
+		</div></a>
+
+		<a href="https://link.springer.com/article/10.1007/s00034-012-9413-2" target=”_blank”><div class="textbox_academics animation_small_top textbox_button">
+			<h3>Design and Evaluation of CNFET-Based Quaternary Circuits</h3>
+			<p>
+				Quaternary circuit, again revolved around CNTFET. talks about some design. such as quad buffer, 
+				quad max, quad min, quad inverter, decoder and multiplexer. talks about how these circuits
+				can be used to construct adders and multipliers.
+			</p>
+		</div></a>
+
+		<a href="https://link.springer.com/article/10.1007/s10470-007-9119-8" target=”_blank”><div class="textbox_academics animation_small_top textbox_button">
+			<h3>Design and application of precise analog computational circuits</h3>
+			<p>
+			</p>
+		</div></a>
+
+		<a href="" target=”_blank”><div class="textbox_academics animation_small_top textbox_button">
+			<h3></h3>
+			<p>
+			</p>
+		</div></a>
+	
+		<hr color="#c0c0c0" border-width="2px" style="margin: 2vw;">
+		
+		<div class="margpad">
+			<h3>Problems</h3>
+			<ul>
+				<li>IEEE needs a subscription to read articles</li>
+				<li>should i have a more narrow read of the papers</li>
+				<li>multiple different gaps</li>
+			</ul>
+		</div>
+
+		<hr color="#0032a8" border-width="5px">
+		
+		<br>
+		<script src="../../../../../js/animation.js"></script>
+		<script src="../../../../../structure/footer.js"></script>
+		<script>
+			function searchScholar() {
+				var y = document.getElementById("search").value;
+				var x = "https://scholar.google.com.au/scholar?hl=en&as_sdt=0%2C5&q=";
+				var z = "&btnG="
+				x = x.concat(y);
+			  window.open(x.concat(z), "_blank");
+			}
+
+			window.addEventListener('keyup', function (e) { 
+				if (e.code == 'Enter') {
+					searchScholar();	
+				}
+			})
+		</script>
+	</body>
+</html>     
