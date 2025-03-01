@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Joe Li </title>
+		<link rel="shortcut icon" type="image/jpeg" href="../images/sig_tab_logo.png">
+		<link href="style/stylesheet.css" rel="stylesheet"/> 
+		<script src="../js/script.js"></script>
+	</head>
+	<body>
+
+		<script src="structure/header.js"></script>
+
+		<br>
+		<center>
+			<img src= "Images/ELEC2141.png" style="border-radius:50px ;" height=300px width=300px boarder=3px>
+			<h1 class="titlecontainer">
+				ELEC3117
+			</h1>
+		</center>
+
+        <a href="kicadPaste/charger.txt"><div class="textbox_button animation_small_left" >
+			<h3>liPo Charger</h3>
+			<p>
+                Charger for 3.3v liPo Battery
+            </p>
+		</div></a>
+
+		<a href="kicadPaste/SDcard.txt" download><div class="textbox_button animation_small_left">
+			<h3>SDcard</h3>
+			<p>
+                
+            </p>
+		</div></a>
+
+		<hr color="#0032a8" border-width="5px">
+		
+		<br>
+
+		<!-- source https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_copy_clipboard -->
+		<script>
+			function copy() {
+				/*
+				const file = fileInput.files[0];
+				const reader = new FileReader();
+
+				reader.onload = function (e) {
+					const fileContent = e.target.result;
+					outputDiv.textContent = fileContent;
+				};
+
+				reader.readAsText(file);
+				*/
+
+				// Copy the text inside the text field
+				navigator.clipboard.writeText("");
+
+				// Alert the copied text
+			  	alert("Copied the text: hello");
+			}
+		</script>
+
+		<script src="structure/footer.js"></script>
+		<script src="../js/animation.js"></script>
+	</body>
+</html>     
