@@ -51,6 +51,24 @@ li {
     flex-wrap: wrap;
     color: #dadada;
 }
+
+.textbox_casual{
+    padding-top: 1vh;
+    padding-bottom: 2vh;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    /*background: linear-gradient(rgb(191, 40, 194) 0%, rgb(213, 0, 152) 100%);
+    */
+    background: rgb(0, 7, 213);
+    border-radius: 20px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 2vw;
+    text-align: center;
+    flex-wrap: wrap;
+    color: #dadada;
+}
+
 .textbox_purple{
     padding-top: 1px;
     padding-bottom: 1px;
@@ -127,9 +145,15 @@ li {
 .textbox_academics:hover{
     background-color: #FFDD00;
 }
+
 .textbox_button:hover{
     transform: translateY(-1.05vh);
     transition: all 0.3s ease-in-out;
+    
+}
+
+.textbox_casual:hover{
+    background-color: #108bff;;
 }
 
 
