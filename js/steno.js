@@ -101,7 +101,7 @@
         ["otherwise", "O*ERZ"]
     ];
 
-export const stenoPunctuations = [
+const stenoPunctuations = [
     [".", "TP-PL"],
     [".", "P-P"],
     [",", "KW-BG"],
