@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Joe Li </title>
+		<link rel="shortcut icon" type="image/jpeg" href="images/sig_tab_logo.png">
+		<link href="style/stylesheet.css" rel="stylesheet"/>
+		<script src="js/script.js"></script>
+	</head>
+	<body>
+
+        <script src="structure/header.js"></script>
+			
+		<br>
+        <meta name="viewport" content="user-scalable = 0">
+		<center>
+            <div style="display: flex;gap: 16px; padding-left: 5vw;">
+                <img src= "images/steno.png" style="border-radius:20px ;" height=100px width=100px boarder=3px>
+			    <h1 class="titlecontainer, titlefont">
+				Steno Playground
+			</h1> 
+            </div>
+            
+		</center>
+
+        <div style="display: flex;gap: 16px; padding-left: 5vw;">
+            <button class='btnS' onclick="setPage(0)">Short Forms</button>   
+            <button class='btnS' onclick="setPage(1)">Punctuations</button>   
+            <button class='btnS' onclick="setPage(2)">Target Practice</button>   
+            <button class='btnS' onclick="setPage(3)">Target Shooting</button>   
+            <button class='btnC' onclick="progressReset()">Reset Progress</button>   
+        </div>
+        
+
+        <div class="textbox">
+            <center>
+                <table>
+                    <tr>
+                        <td style="text-align:center; vertical-align: bottom;" class="tabletd">
+                            <div style="margin-top: 1vh; font-size: 24px;
+                            font-family: 'Audiowide';">Word</div>
+                            <div class="textbox_silver" id="displayWord"
+                            style="padding:5px; width:30vw; height:10vh; display:flex; 
+                            align-items:center; justify-content:center; margin-top:1vh;"></div>
+                        </td>
+                        <td style="text-align:center; vertical-align: bottom;" class="tabletd">
+                            <div style="margin-top: 1vh; font-size: 24px;
+                            font-family: 'Audiowide';">Steno</div>
+                            <div class="textbox_silver" id="answer"
+                            style="padding:5px; width:30vw; height:10vh; display:flex; 
+                            align-items:center; justify-content:center; margin-top:1vh;"></div>
+                        </td>
+                    </tr>
+                </table>
+                
+                <div type="text" id="textbox" name="fname" asdf
+                    style="
+                    width: 50vw; 
+                    height: 6vh; 
+                    background-color: rgb(166, 190, 255); 
+                    color: black;
+                    border-radius: 10px; 
+                    border-style: none;
+                    font-family: sans-serif; 
+                    font-size: medium;
+                    text-align: center;
+                    padding: 10px;"></div><br>
+
+                <div class = "progressBar"><div class = "progress" id = "progressBar"></div></div>
+                <br>
+            </center>
+        </div>
+
+
+        
+		<hr color="#0032a8" border-width="5px">
+		
+		<br>
+		
+        <script src="structure/footer.js"></script>
+        <script src="js/steno.js"></script>
+        
+	</body>
+</html> 
+
+<style>
+    .btnS{
+        font-size: 24px;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+        outline: none;
+        margin: 4px 2px;
+        
+        color: white;
+        text-align: center;
+        padding: 5px 10px;
+        width: 250px;
+        height: 50px;
+        font-family: 'Audiowide';
+        border-radius: 10px;
+        transition: ease-out 0.3s;
+        margin-bottom: 2vw;
+
+        background-color: rgb(0, 94, 255);
+    }
+    .btnS:hover{
+        font-size: 25px;
+        background-color: rgb(107, 181, 255);
+    }
+    
+    .btnC{
+        font-size: 24px;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+        outline: none;
+        margin: 4px 2px;
+        
+        color: white;
+        text-align: center;
+        padding: 5px 10px;
+        width: 250px;
+        height: 50px;
+        font-family: 'Audiowide';
+        border-radius: 10px;
+        transition: ease-out 0.3s;
+        margin-bottom: 2vw;
+
+        background-color: rgb(255, 0, 106);
+    }
+    .btnC:hover{
+        font-size: 25px;
+        background-color: rgb(255, 107, 139);
+    }
+    .progressBar{
+        width: 70vw;
+        height: 5vw;
+        position: relative;
+        border: 5px solid rgb(255, 255, 255);
+        border-radius: 10px;
+        margin: 2vw;
+    }
+    .progress{
+        height: 100%;
+        width: 100%;
+        border-radius: 0px;
+        position: absolute;
+        background-color: rgb(0, 255, 72);
+        
+    }
+</style>
+
