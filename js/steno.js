@@ -142,6 +142,13 @@ const stenoPunctuations = [
     ["^", "KR-RT"]
 ];
 
+const pages = Object.freeze({
+  shortForm: 0,
+  punctuations: 1,
+  target: 2,
+  target2: 3
+});
+
     progress = 10;
     current = 1;
     last = 1;
@@ -183,7 +190,8 @@ const stenoPunctuations = [
 
         if (cookieDelete) {
             // clear cookies - progress
-            setCookie("progress", 0, -1);
+            setCookie("progressShort", 0, -1);
+            setCookie("progressPunct", 0, -1);
 
             // clear word array
             for (let i = 0; i < 100; i++) {
@@ -192,7 +200,7 @@ const stenoPunctuations = [
 
             // clear punc array
             for (let i = 0; i < 38; i++) {
-                setCookie("punc" + String(i), 0, -1);
+                setCookie("punct" + String(i), 0, -1);
             }
 
             // alert user
@@ -202,30 +210,41 @@ const stenoPunctuations = [
         }
     }
 
+    function updateProgress(){
+        document.getElementById("progressBar").style.width = progress.toString(10) + "%";
+    }
+
     function setPage(select) {
+        
         switch (select) {
             case 0:
-                page = 0;
+                page = pages.shortForm;
+                document.getElementById("answer").innerHTML = "";
+                document.getElementById("displayWord").innerHTML = stenoBriefs[current][0];
                 break;
             case 1:
-                page = 1;
+                page = pages.punctuations;
+                document.getElementById("answer").innerHTML = "";
+                document.getElementById("displayWord").innerHTML = stenoPunctuations[current][0];
                 break;
             case 2:
-                page = 2;
+                page = pages.target;
                 break;
             case 3:
-                page = 3;
+                page = pages.target2;
                 break;
             default:
                 page = 0;
         }
+        textbox.textContent = "";
+        updateProgress();
     }
 
     function wrongWord() {
         if (gaveUp == 0) {
             textbox.textContent = "";
-            document.getElementById("answer").innerHTML = stenoBriefs[current][1];
-            
+            if (page == pages.shortForm) document.getElementById("answer").innerHTML = stenoBriefs[current][1];
+            else if (page == pages.punctuations) document.getElementById("answer").innerHTML = stenoPunctuations[current][1];
             value = getCookie("word" + String(current));
             console.log("current value is " + String(value));
             if (value <= 0) value = 0;
@@ -241,10 +260,11 @@ const stenoPunctuations = [
     function init() {
         console.log("Hello, World!");
         document.getElementById("displayWord").innerHTML = stenoBriefs[current][0];
-        progress = getCookie("progress");
-        setCookie("progress", progress, 365);
+        progress = getCookie("progressShort");
+        setCookie("progressShort", progress, 365);
         
         document.getElementById("progressBar").style.width = progress.toString(10) + "%";
+        updateProgress();
     }
 
     // event listeners
@@ -267,11 +287,11 @@ const stenoPunctuations = [
         }
 
         // correct answer is typed
-        if (textbox.textContent.trimStart() === stenoBriefs[current][0])  {
+        if ((page == pages.shortForm) && 
+            (textbox.textContent.trimStart() === stenoBriefs[current][0]))  {
             // flush the textbox that user typed
             textbox.textContent = "";
             correct = 1;
-
             // update the value - read modify write
             if (gaveUp == 0) {
                 value = getCookie("word" + String(current));
@@ -280,26 +300,59 @@ const stenoPunctuations = [
                 setCookie("word" + String(current), value, 365);
             }
             gaveUp = 0;
-
             // get a new random value
             last = current;
-            while(last == current) current = Math.floor(Math.random() * progress);
-
+            while(last == current && progress != 0) {
+                current = Math.floor(Math.random() * (progress + 1));
+            }
             // display the new word
             document.getElementById("answer").innerHTML = "";
             document.getElementById("displayWord").innerHTML = stenoBriefs[current][0];
-
             pass = 1;
             for (let i = 0; i < progress; i++) {
                 value = getCookie("word" + String(i));
                 if (value < 3) pass = 0;
             }
             if (pass == 1) {
-                progress = getCookie("progress");
+                progress = getCookie("progressShort");
                 if (progress < 100) progress++;
                 else progress = 100;
-                setCookie("progress", progress, 365);
-                console.log("progress is " + String(progress));
+                setCookie("progressShort", progress, 365);
+            }
+        }
+
+        // correct answer is typed
+        if ((page == pages.punctuations) && 
+            (textbox.textContent.trimStart() === stenoPunctuations[current][0]))  {
+            // flush the textbox that user typed
+            textbox.textContent = "";
+            correct = 1;
+            // update the value - read modify write
+            if (gaveUp == 0) {
+                value = getCookie("punct" + String(current));
+                if (value >= 3) value = 3;
+                else value++;
+                setCookie("punct" + String(current), value, 365);
+            }
+            gaveUp = 0;
+            // get a new random value
+            last = current;
+            while(last == current && progress != 0) {
+                current = Math.floor(Math.random() * (progress + 1));
+            }
+            // display the new word
+            document.getElementById("answer").innerHTML = "";
+            document.getElementById("displayWord").innerHTML = stenoPunctuations[current][0];
+            pass = 1;
+            for (let i = 0; i < progress; i++) {
+                value = getCookie("punct" + String(i));
+                if (value < 3) pass = 0;
+            }
+            if (pass == 1) {
+                progress = getCookie("progressPunct");
+                if (progress < 38) progress++;
+                else progress = 38;
+                setCookie("progressPunct", progress, 365);
             }
         }
 
@@ -309,5 +362,5 @@ const stenoPunctuations = [
         }
 
         // always update progress bar
-        document.getElementById("progressBar").style.width = progress.toString(10) + "%";
+        updateProgress()
     });
